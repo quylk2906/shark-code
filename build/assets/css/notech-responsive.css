@@ -1623,7 +1623,7 @@
     }
 
     .main-menu__logo {
-        margin-right: 50px;
+        margin-left: 50px;
     }
 
     .main-menu .mobile-nav__toggler {
@@ -1668,7 +1668,7 @@
     }
 
     .main-menu__logo {
-        margin-right: 50px;
+        margin-left: 50px;
     }
 
     .main-menu .mobile-nav__toggler {
@@ -1726,7 +1726,7 @@
     }
 
     .main-menu__logo {
-        margin-right: 0;
+        margin-left: 0;
     }
 
     .main-menu__main-menu-box {
