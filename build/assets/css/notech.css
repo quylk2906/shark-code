@@ -16,7 +16,24 @@
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
-
+:root {
+  --notech-font: "Kumbh Sans", sans-serif;
+  --notech-reey-font: "reeyregular";
+  --notech-gray-1: #16233c;
+  --notech-gray-rgb: 119, 113, 129;
+  --notech-white: #ffffff;
+  --notech-white-rgb: 255, 255, 255;
+  --notech-black: #1b1525;
+  --notech-black-rgb: 27, 21, 37;
+  --notech-base: #ff7069;
+  --notech-base-rgb: 102, 83, 232;
+  --notech-primary: #2be4ac;
+  --notech-primary-rgb: 43, 228, 172;
+  --notech-extra: #f7f7f9;
+  --notech-extra-rgb: 247, 247, 249;
+  --notech-bdr-color: #e9e9ee;
+  --notech-bdr-color-rgb: 233, 233, 238;
+}
 
 .row {
   --bs-gutter-x: 30px;
@@ -24,6 +41,11 @@
 
 .gutter-y-30 {
   --bs-gutter-y: 30px;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 body {
@@ -1322,7 +1344,7 @@ ul {
 
 .mobile-nav__content {
   width: 300px;
-  background-color: var(--notech-gray-1);
+  background-color: var(--notech-extra-black);
   z-index: 10;
   position: relative;
   height: 100%;

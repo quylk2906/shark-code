@@ -1,24 +1,8 @@
 :root {
   --notech-bdr-color: rgba(255, 255, 255, 0.1);
+  --notech-gray: #aea8b9;
   --notech-extra: #283c63;
   --notech-extra-black: #283c63;
-  --notech-font: "Kumbh Sans", sans-serif;
-  --notech-reey-font: "reeyregular";
-  --notech-gray: #aea8b9;
-  --notech-gray-1: #16233c;
-  --notech-gray-rgb: 119, 113, 129;
-  --notech-white: #ffffff;
-  --notech-white-rgb: 255, 255, 255;
-  --notech-black: #1b1525;
-  --notech-black-rgb: 27, 21, 37;
-  --notech-base: #ff7069;
-  --notech-base-rgb: 102, 83, 232;
-  --notech-primary: #2be4ac;
-  --notech-primary-rgb: 43, 228, 172;
-  --notech-extra: #f7f7f9;
-  --notech-extra-rgb: 247, 247, 249;
-  --notech-bdr-color: #e9e9ee;
-  --notech-bdr-color-rgb: 233, 233, 238;
 }
 
 body,
@@ -69,8 +53,7 @@ body,
 .services-two__single,
 .testimonial-two__single-inner,
 .main-header__top-inner {
-  /* background-color: #100d17; */
-  background-color: var(--notech-gray-1);
+  background-color: #100d17;
 }
 
 .team-details__social a,
