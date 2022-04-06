@@ -290,11 +290,6 @@
 
 }
 
-
-
-
-
-
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .feature-one__hover-content {
@@ -669,8 +664,6 @@
 
 
 }
-
-
 
 
 /* Mobile Layout: 320px. */
@@ -1293,34 +1286,10 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 1200px) and (max-width: 1330px) {
     .project-two__content {
         padding-left: 20px;
     }
-
-
-
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1680px) {
@@ -1332,80 +1301,47 @@
         width: 80%;
     }
 
-
-
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .business-from-two-img {
         right: -280px;
     }
-
     .business-from-two-img img {
         width: 70%;
     }
-
-
-
 }
-
-
-
-
 
 /*--------------------------------------------------------------
 # Slider All Responsice Css
 --------------------------------------------------------------*/
 
 @media only screen and (min-width: 1400px) and (max-width: 1725px) {
-
     .main-slider-three__shape-1 {
         bottom: 135px;
         right: -100px;
     }
-
     .main-slider-three__shape-1 img {
         width: 60%;
     }
-
     .main-slider-three__img {
         bottom: 106px;
         right: 133px;
     }
-
-
-
-
-
-
-
-
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-
     .main-slider-three__shape-1 {
         display: none;
     }
-
     .main-slider-three__img {
         bottom: 106px;
         right: 80px;
     }
-
     .main-slider-three__social {
         display: none;
     }
-
-
-
-
-
-
-
-
 }
-
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .main-slider-two #main-slider-pagination {
@@ -1431,11 +1367,6 @@
 
 
 }
-
-
-
-
-
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-slider h2 {
@@ -1490,8 +1421,6 @@
 
 
 }
-
-
 
 @media only screen and (max-width: 767px) {
 
@@ -1572,13 +1501,10 @@
         padding-bottom: 150px;
     }
 
-
-
-
+    .footer-widget__logo {
+        padding-bottom: 1rem;
+    }
 }
-
-
-
 
 /*--------------------------------------------------------------
 # Main Menu All Responsice Css
@@ -1608,10 +1534,6 @@
 
 
 }
-
-
-
-
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .main-header__top-inner {
@@ -1657,7 +1579,6 @@
 
 }
 
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-header__top {
         display: none;
@@ -1699,12 +1620,10 @@
         margin-bottom: 14px;
     }
 
-
-
-
+    .footer-widget__logo {
+        padding-bottom: 1rem;
+    }
 }
-
-
 
 
 @media (max-width: 767px) {

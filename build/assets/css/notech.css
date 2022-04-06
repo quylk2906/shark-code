@@ -712,18 +712,21 @@ ul {
   margin-left: 140px;
 }
 
-.main-menu__logo-inner {
+.main-menu__logo-inner,
+.footer-widget__logo-inner {
   display: flex;
   align-items: center;
 }
 
-.main-menu__logo-text {
+.main-menu__logo-text,
+.footer-widget__logo-text {
   color: #fbe8d3;
   font-weight: bold;
   font-size: 24px;
 }
 
-.main-menu__logo-slash {
+.main-menu__logo-slash,
+.footer-widget__logo-slash {
   color: #ff7069;
   margin-bottom: -5px;
   font-weight: bold;
@@ -4703,7 +4706,7 @@ ul {
   position: relative;
   display: block;
   margin-right: 73px;
-  margin-top: 4px;
+  margin-top: -4px;
 }
 
 .footer-widget__logo {
@@ -9096,7 +9099,7 @@ ul {
 .google-map-two {
   position: relative;
   display: block;
-  background-color: var(--notech-extra);
+  background-color: #dee2e6;
 }
 
 .google-map__two-box {
