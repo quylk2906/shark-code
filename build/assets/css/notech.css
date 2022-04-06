@@ -16,24 +16,7 @@
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
-:root {
-  --notech-font: "Kumbh Sans", sans-serif;
-  --notech-reey-font: "reeyregular";
-  --notech-gray: #777181;
-  --notech-gray-rgb: 119, 113, 129;
-  --notech-white: #ffffff;
-  --notech-white-rgb: 255, 255, 255;
-  --notech-black: #1b1525;
-  --notech-black-rgb: 27, 21, 37;
-  --notech-base: #6653e8;
-  --notech-base-rgb: 102, 83, 232;
-  --notech-primary: #2be4ac;
-  --notech-primary-rgb: 43, 228, 172;
-  --notech-extra: #f7f7f9;
-  --notech-extra-rgb: 247, 247, 249;
-  --notech-bdr-color: #e9e9ee;
-  --notech-bdr-color-rgb: 233, 233, 238;
-}
+
 
 .row {
   --bs-gutter-x: 30px;
@@ -659,7 +642,7 @@ ul {
   left: 0;
   right: -100000000000px;
   content: "";
-  background-color: var(--notech-extra);
+  /* background-color: var(--notech-black); */
   z-index: -1;
 }
 
@@ -1339,7 +1322,7 @@ ul {
 
 .mobile-nav__content {
   width: 300px;
-  background-color: var(--notech-black);
+  background-color: var(--notech-gray-1);
   z-index: 10;
   position: relative;
   height: 100%;
@@ -2575,7 +2558,7 @@ ul {
 .get-solutions {
   position: relative;
   display: block;
-  background-color: var(--notech-base);
+  background-color: var(--notech-bdr-color);
 }
 
 .get-solutions__inner {
@@ -2619,6 +2602,7 @@ ul {
   position: relative;
   display: block;
   padding: 120px 0 90px;
+  background-color: var(--notech-extra);
 }
 
 .feature-one--service-two-page {
@@ -3053,7 +3037,7 @@ ul {
 .services-one {
   position: relative;
   display: block;
-  background-color: var(--notech-black);
+  background-color: var(--notech-gray-1);
   padding: 120px 0 90px;
   background-position: center center;
   overflow: hidden;
@@ -3163,9 +3147,9 @@ ul {
 .services-one__content {
   position: relative;
   display: block;
-  border: 1px solid #322d3b;
+  border: 1px solid var(--notech-extra-black);
   padding: 37px 0 32px;
-  background-color: var(--notech-black);
+  background-color: var(--notech-extra-black);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -3458,7 +3442,7 @@ ul {
   right: 0;
   height: 464px;
   content: "";
-  background-color: var(--notech-extra);
+  background-color: var(--notech-gray-1);
   z-index: -1;
 }
 
@@ -4123,7 +4107,8 @@ ul {
   display: block;
   float: right;
   width: 50%;
-  background-color: var(--notech-black);
+  /* background-color: var(--notech-black); */
+  background-color: var(--notech-gray-1);
   min-height: 794px;
 }
 
@@ -4571,7 +4556,7 @@ ul {
 .site-footer {
   position: relative;
   display: block;
-  background-color: var(--notech-black);
+  background-color: var(--notech-gray-1);
   z-index: 1;
 }
 
