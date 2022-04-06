@@ -707,9 +707,11 @@ ul {
 }
 
 .main-menu__logo {
+  position: relative;
+  float: left;
+  margin-right: 140px;
   display: block;
   padding: 38.5px 0;
-  margin-left: 140px;
 }
 
 .main-menu__logo-inner,
