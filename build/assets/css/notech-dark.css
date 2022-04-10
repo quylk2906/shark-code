@@ -1,6 +1,6 @@
 :root {
   --notech-bdr-color: rgba(255, 255, 255, 0.1);
-  --notech-gray: #aea8b9;
+  --notech-gray: #FBE8D3;
   --notech-extra: #283c63;
   --notech-extra-black: #283c63;
 }
@@ -128,7 +128,7 @@ body,
 .main-menu .main-menu__list > li:hover > a,
 .stricky-header .main-menu__list > li.current > a,
 .stricky-header .main-menu__list > li:hover > a {
-  color: #ffffff;
+  color: var(--notech-base);
 }
 
 .trusted-company__points li .text p,

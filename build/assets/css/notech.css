@@ -21,13 +21,13 @@
   --notech-reey-font: "reeyregular";
   --notech-gray-1: #16233c;
   --notech-gray-rgb: 119, 113, 129;
-  --notech-white: #ffffff;
+  --notech-white: #FBE8D3;
   --notech-white-rgb: 255, 255, 255;
   --notech-black: #1b1525;
   --notech-black-rgb: 27, 21, 37;
   --notech-base: #ff7069;
   --notech-base-rgb: 102, 83, 232;
-  --notech-primary: #2be4ac;
+  --notech-primary: #ff7069;
   --notech-primary-rgb: 43, 228, 172;
   --notech-extra: #f7f7f9;
   --notech-extra-rgb: 247, 247, 249;
@@ -2042,6 +2042,11 @@ ul {
   text-align: center;
 }
 
+.main-slider__content h2 {
+  color: var(--notech-gray) !important;
+}
+
+
 .main-slider p {
   font-size: 36px;
   color: var(--notech-primary);
@@ -3932,7 +3937,7 @@ ul {
 
 .counter-one__title {
   font-size: 16px;
-  color: var(--notech-black);
+  color: var(--notech-gray);
   font-weight: 700;
   line-height: 26px;
   padding-bottom: 15px;
