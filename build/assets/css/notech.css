@@ -2044,12 +2044,13 @@ ul {
 
 .main-slider__content h2 {
   color: var(--notech-gray) !important;
+  line-height: 90px;
 }
 
 
 .main-slider p {
   font-size: 70px;
-  color: var(--notech-primary);
+  color: var(--notech-base);
   letter-spacing: 0.1em;
   opacity: 0;
   visibility: hidden;
@@ -2063,7 +2064,9 @@ ul {
   transition: transform 2000ms ease, opacity 2000ms ease,
     -webkit-transform 2000ms ease;
 }
-
+.main-slider p span {
+  color: var(--notech-white);
+}
 .main-slider h2 {
   font-size: 70px;
   color: var(--notech-white);
