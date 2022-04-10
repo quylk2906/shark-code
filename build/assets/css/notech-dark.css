@@ -176,10 +176,10 @@ body,
   background-image: url(../images/dark/team-bg-1-1-.png);
 }
 
-.message-one .comment-form__input-box input[type="text"],
-.message-one .comment-form__input-box textarea,
-.message-one .comment-form__input-box input[type="email"] {
-  background-color: var(--notech-extra);
+.comment-form__input-box input[type="text"],
+.comment-form__input-box textarea,
+.comment-form__input-box input[type="email"] {
+  background-color: var(--notech-gray-1);
   color: var(--notech-gray);
 }
 
@@ -193,4 +193,12 @@ body,
 
 .carousel-dot-style-1 .owl-dots .owl-dot span {
   background-color: #fff;
+}
+
+.contact-details {
+  background-color: var(--notech-gray-1);
+}
+
+.footer-widget__newsletter-input-box input {
+  background-color: var(--notech-extra-black);
 }
