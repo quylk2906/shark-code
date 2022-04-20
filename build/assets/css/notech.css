@@ -10969,7 +10969,7 @@ ul {
   width: 100%;
   border: none;
   outline: none;
-  background-color: var(--notech-extra);
+  background-color: var(--notech-gray-1);
   font-size: 16px;
   color: var(--notech-gray);
   font-weight: 400;
