@@ -272,7 +272,7 @@
                 <div class="row">
                   <div class="col-xl-12">
                     <div class="comment-form__input-box text-message-box">
-                      <textarea name="message" placeholder="Write comment" id="subject"></textarea>
+                      <textarea name="message" placeholder="Write comment" id="message"></textarea>
                     </div>
                     <div class="comment-form__btn-box">
                       <button type="submit" class="thm-btn comment-form__btn">
@@ -525,7 +525,6 @@
           phone: $("#phone").val(),
           comment: $("#message").val(),
         };
-
         $.ajax({
           type: "POST",
           url: "https://us-central1-shark-code-7.cloudfunctions.net/sendEmail",
