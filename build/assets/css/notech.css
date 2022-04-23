@@ -763,7 +763,7 @@ ul {
 }
 
 .main-menu__call-icon img {
-  width: auto;
+  width: 40px;
 }
 
 .main-menu__call-number {
@@ -3394,7 +3394,7 @@ ul {
 }
 
 .testimonial-one__quote img {
-  width: auto !important;
+  width: 56px !important;
 }
 
 .testimonial-one__carousel.owl-carousel .owl-dots {
@@ -4025,7 +4025,7 @@ ul {
 }
 
 .trusted-source__icon img {
-  width: auto;
+  width: 38px;
 }
 
 .trusted-source__icon:before {
@@ -6458,7 +6458,7 @@ ul {
 }
 
 .testimonial-two__icon img {
-  width: auto !important;
+  width: 73px !important;
   margin: 0 auto;
 }
 
