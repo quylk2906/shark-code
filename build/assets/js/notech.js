@@ -411,8 +411,10 @@
     let FileName = window.location.href.split('/').reverse()[0];
     selector.find('li').each(function () {
       let anchor = $(this).find('a');
-      if ($(anchor).attr('href').includes(FileName)) {
-        $(this).addClass('current');
+      if (FileName) {
+        if ($(anchor).attr('href').includes(FileName)) {
+          $(this).addClass('current');
+        }
       }
     });
     // if any li has .current elmnt add class
