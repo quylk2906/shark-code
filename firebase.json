@@ -8,6 +8,14 @@
     {
       "source": "/sendEmail",
       "function": "sendEmail"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "**",
+      "destination": "/index.html"
     }
   ]
 }
