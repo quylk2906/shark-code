@@ -19,7 +19,7 @@
 :root {
   --notech-font: 'Kumbh Sans', sans-serif;
   --notech-reey-font: 'reeyregular';
-  --notech-gray-1: #16233c;
+  --notech-gray-1: #fbe8d3;
   --notech-gray-rgb: 119, 113, 129;
   --notech-white: #fbe8d3;
   --notech-white-rgb: 255, 255, 255;
@@ -54,6 +54,7 @@ body {
   font-size: 18px;
   line-height: 32px;
   font-weight: 400;
+  background-color: var(--notech-white);
 }
 
 body.locked {
@@ -2629,7 +2630,7 @@ ul {
   position: relative;
   display: block;
   padding: 120px 0 90px;
-  background-color: var(--notech-extra);
+  /* background-color: var(--notech-white); */
 }
 
 .feature-one--service-two-page {
@@ -3064,7 +3065,7 @@ ul {
 .services-one {
   position: relative;
   display: block;
-  background-color: var(--notech-gray-1);
+  background-color: var(--notech-black);
   padding: 120px 0 90px;
   background-position: center center;
   overflow: hidden;
@@ -3174,9 +3175,9 @@ ul {
 .services-one__content {
   position: relative;
   display: block;
-  border: 1px solid var(--notech-extra-black);
+  border: 1px solid rgb(50 45 59);
   padding: 37px 0 32px;
-  background-color: var(--notech-extra-black);
+  background-color: var(--notech-black);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -3469,7 +3470,7 @@ ul {
   right: 0;
   height: 464px;
   content: '';
-  background-color: var(--notech-gray-1);
+  background-color: var(--notech-extra);
   z-index: -1;
 }
 
@@ -3800,7 +3801,7 @@ ul {
 .counter-one__bg {
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: var(--notech-extra);
+  background-color: var(--notech-white);
   background-blend-mode: luminosity;
   position: absolute;
   top: 0;
@@ -3859,7 +3860,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   border-radius: 50%;
-  background-color: var(--notech-gray-1) !important;
+  background-color: white;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
   height: 75px;
@@ -4583,7 +4584,7 @@ ul {
 .site-footer {
   position: relative;
   display: block;
-  background-color: var(--notech-gray-1);
+  background-color: var(--notech-black);
   z-index: 1;
 }
 
@@ -4606,7 +4607,7 @@ ul {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 636px;
+  height: 624px;
   width: 531px;
   background-color: var(--notech-black);
   background-blend-mode: luminosity;
