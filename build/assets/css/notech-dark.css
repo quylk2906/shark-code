@@ -1,8 +1,7 @@
 :root {
   --notech-bdr-color: rgba(255, 255, 255, 0.1);
-  --notech-gray: #FBE8D3;
-  --notech-extra: #283c63;
-  --notech-extra-black: #283c63;
+  --notech-gray: #aea8b9;
+  --notech-extra: #1b1525;
 }
 
 body,
@@ -12,7 +11,7 @@ body,
 .sidebar__tags-list a,
 .sidebar__category-list li.active a,
 .sidebar__category-list li:hover a {
-  background-color: var(--notech-extra-black);
+  background-color: #100d17;
 }
 
 .stricky-header.main-menu,
@@ -64,6 +63,26 @@ body,
 .team-details__education-awards li h4,
 .main-header__top-right-social a {
   color: var(--notech-gray);
+}
+
+.main-header--one .main-menu__left .main-menu__logo .logo-light,
+.main-menu .main-menu__left .main-menu__logo .logo-light {
+  display: block;
+}
+
+.main-header--one .main-menu__left .main-menu__logo .logo-dark,
+.main-menu .main-menu__left .main-menu__logo .logo-dark {
+  display: none;
+}
+
+.main-menu-three .main-menu__left--two .main-menu__logo .logo-light,
+.main-menu-two .main-menu__left--two .main-menu__logo .logo-light {
+  display: block;
+}
+
+.main-menu-three .main-menu__left--two .main-menu__logo .logo-dark,
+.main-menu-two .main-menu__left--two .main-menu__logo .logo-dark {
+  display: none;
 }
 
 .project-two__title a,
@@ -124,11 +143,11 @@ body,
 .main-menu .main-menu__list li ul li a,
 .stricky-header .main-menu__list li ul li a,
 .main-menu__search,
-.main-menu .main-menu__list > li.current > a,
-.main-menu .main-menu__list > li:hover > a,
-.stricky-header .main-menu__list > li.current > a,
-.stricky-header .main-menu__list > li:hover > a {
-  color: var(--notech-base);
+.main-menu .main-menu__list>li.current>a,
+.main-menu .main-menu__list>li:hover>a,
+.stricky-header .main-menu__list>li.current>a,
+.stricky-header .main-menu__list>li:hover>a {
+  color: #ffffff;
 }
 
 .trusted-company__points li .text p,
@@ -176,10 +195,10 @@ body,
   background-image: url(../images/dark/team-bg-1-1-.png);
 }
 
-.comment-form__input-box input[type="text"],
-.comment-form__input-box textarea,
-.comment-form__input-box input[type="email"] {
-  background-color: var(--notech-gray-1);
+.message-one .comment-form__input-box input[type="text"],
+.message-one .comment-form__input-box textarea,
+.message-one .comment-form__input-box input[type="email"] {
+  background-color: var(--notech-extra);
   color: var(--notech-gray);
 }
 
@@ -193,12 +212,4 @@ body,
 
 .carousel-dot-style-1 .owl-dots .owl-dot span {
   background-color: #fff;
-}
-
-.contact-details {
-  background-color: var(--notech-gray-1);
-}
-
-.footer-widget__newsletter-input-box input {
-  background-color: var(--notech-extra-black);
 }
