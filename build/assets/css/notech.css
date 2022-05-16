@@ -33,6 +33,7 @@
   --notech-extra-rgb: 247, 247, 249;
   --notech-bdr-color: #e9e9ee;
   --notech-bdr-color-rgb: 233, 233, 238;
+  --shark-color: #283c63;
 }
 
 .row {
@@ -46,6 +47,7 @@
 body {
   font-family: var(--notech-font);
   color: var(--notech-gray);
+  background-color: var(--notech-white);
   font-size: 18px;
   line-height: 32px;
   font-weight: 400;
@@ -492,7 +494,7 @@ ul {
 .main-header {
   position: relative;
   display: block;
-  background-color: var(--notech-white);
+  /* background-color: var(--shark-code); */
   width: 100%;
   z-index: 999;
   -webkit-transition: all 500ms ease;
@@ -1722,7 +1724,7 @@ ul {
 # Navigations Three
 --------------------------------------------------------------*/
 .main-header-three {
-  background: transparent;
+  /* background-color: var(--notech-white); */
   position: absolute;
   left: 0px;
   top: 0px;
@@ -1919,6 +1921,7 @@ ul {
 .main-slider {
   overflow: hidden;
   position: relative;
+  background-color: var(--shark-color);
 }
 
 .main-slider .swiper-slide {
@@ -2429,8 +2432,9 @@ ul {
   background-position: center;
   background-size: cover;
   opacity: 0.6;
-  background-blend-mode: color-burn;
-  background-color: var(--notech-white);
+  /* background-blend-mode: color-burn; */
+  background-color: var(--shark-code);
+
   z-index: -1;
 }
 
@@ -2438,7 +2442,7 @@ ul {
   position: absolute;
   bottom: 0;
   right: 0;
-  mix-blend-mode: color-dodge;
+  /* mix-blend-mode: color-dodge; */
   -webkit-animation: fa-spin 10s ease infinite;
   animation: fa-spin 10s ease infinite;
 }
@@ -2524,12 +2528,12 @@ ul {
 }
 
 .main-slider-three h2 span {
-  color: var(--notech-primary);
+  color: var(--shark-color);
 }
 
 .main-slider-three p {
   font-size: 18px;
-  color: #dcd7ff;
+  color: var(--notech-gray);
   line-height: 33px;
   text-transform: inherit;
   letter-spacing: inherit;
@@ -4573,7 +4577,7 @@ ul {
 .site-footer {
   position: relative;
   display: block;
-  background-color: var(--notech-black);
+  background-color: #283c63;
   z-index: 1;
 }
 
@@ -4587,7 +4591,7 @@ ul {
   background-position: top center;
   background-size: cover;
   background-blend-mode: luminosity;
-  background-color: var(--notech-black);
+  background-color: #283c63;
   opacity: 0.12;
   z-index: -1;
 }
@@ -4598,7 +4602,7 @@ ul {
   right: 0;
   height: 636px;
   width: 531px;
-  background-color: var(--notech-black);
+  background-color: #283c63;
   background-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-position: bottom center;
