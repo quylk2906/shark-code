@@ -6807,8 +6807,12 @@ ul {
 
 .services-three__single {
   position: relative;
-  display: block;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* margin-bottom: 30px; */
+  padding-bottom: 30px;
+
 }
 
 .services-three__img {
@@ -6862,12 +6866,15 @@ ul {
 
 .services-three__content {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
   padding: 72px 40px 29px;
   z-index: 2;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .services-three__icon {
@@ -6943,6 +6950,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-top: auto;
 }
 
 .services-three__learn-more a {
