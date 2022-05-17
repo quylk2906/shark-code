@@ -34,13 +34,8 @@
   --notech-bdr-color: #e9e9ee;
   --notech-bdr-color-rgb: 233, 233, 238;
   --shark-color: #283c63;
+  --shark-color-red: #ff5252;
 }
-
-@font-face {
-  font-family: "Neue Machina";
-  src: url('../fonts//NeueMachina-Regular.otf');
-}
-
 
 .row {
   --bs-gutter-x: 30px;
@@ -891,27 +886,27 @@ ul {
 
 .main-menu .main-menu__list > li + li,
 .stricky-header .main-menu__list > li + li {
-  margin-left: 60px;
+  margin-left: 79px;
 }
 
 .main-menu .main-menu__list > li > a,
 .stricky-header .main-menu__list > li > a {
-  font-size: 18px;
-  font-family: "Neue Machina";
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Neue Machina';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--notech-gray);
+  color: var(--shark-color);
   position: relative;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-  font-weight: 400;
 }
 
-.main-menu .main-menu__list > li > a::before,
+/* .main-menu .main-menu__list > li > a::before,
 .stricky-header .main-menu__list > li > a::before {
   content: '';
   height: 2px;
@@ -931,16 +926,16 @@ ul {
   -webkit-transform-origin: left center;
   transform-origin: left center;
   z-index: 1;
-}
+} */
 
 .main-menu .main-menu__list > li.current > a,
 .main-menu .main-menu__list > li:hover > a,
 .stricky-header .main-menu__list > li.current > a,
 .stricky-header .main-menu__list > li:hover > a {
-  color: var(--notech-black);
+  color: var(--shark-color-red);
 }
 
-.main-menu .main-menu__list > li.current > a::before,
+/* .main-menu .main-menu__list > li.current > a::before,
 .main-menu .main-menu__list > li:hover > a::before,
 .stricky-header .main-menu__list > li.current > a::before,
 .stricky-header .main-menu__list > li:hover > a::before {
@@ -950,13 +945,9 @@ ul {
   transform-origin: right center;
 }
 
-.main-menu .main-menu__list > li.current > a::before {
-  background-color: var(--notech-base);
-}
-
 .main-menu .main-menu__list > li:hover > a::before {
   background-color: var(--notech-base);
-}
+} */
 
 .main-menu .main-menu__list li ul,
 .stricky-header .main-menu__list li ul {
@@ -1788,17 +1779,17 @@ ul {
   color: var(--notech-primary);
 }
 
-.main-menu-three .main-menu__list > li > a,
+/* .main-menu-three .main-menu__list > li > a,
 .stricky-header.main-menu-three .main-menu__list > li > a {
   color: var(--notech-black);
-}
+} */
 
-.main-menu-three .main-menu__list > li.current > a,
+/* .main-menu-three .main-menu__list > li.current > a,
 .main-menu-three .main-menu__list > li:hover > a,
 .stricky-header.main-menu-three .main-menu__list > li.current > a,
 .stricky-header.main-menu-three .main-menu__list > li:hover > a {
   color: var(--notech-black);
-}
+} */
 
 .main-menu-three .main-menu__list > li > a::before,
 .stricky-header.main-menu-three .main-menu__list > li > a::before {
