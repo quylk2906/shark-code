@@ -652,9 +652,10 @@ ul {
   align-items: center;
   padding-left: 40px;
   z-index: 1;
+  margin-top: 10px;
 }
 
-.main-header__top-right-social:before {
+/* .main-header__top-right-social:before {
   position: absolute;
   top: -14px;
   bottom: -13px;
@@ -663,7 +664,7 @@ ul {
   content: '';
   background-color: var(--notech-extra);
   z-index: -1;
-}
+} */
 
 .main-header__top-right-social a {
   display: -webkit-box;
