@@ -36,6 +36,12 @@
   --shark-color: #283c63;
 }
 
+@font-face {
+  font-family: "Neue Machina";
+  src: url('../fonts//NeueMachina-Regular.otf');
+}
+
+
 .row {
   --bs-gutter-x: 30px;
 }
@@ -890,7 +896,8 @@ ul {
 
 .main-menu .main-menu__list > li > a,
 .stricky-header .main-menu__list > li > a {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Neue Machina";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,6 +916,7 @@ ul {
   content: '';
   height: 2px;
   border-radius: 0px;
+  margin-top: 2px;
   background-color: var(--notech-base);
   position: absolute;
   bottom: -2px;
