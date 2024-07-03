@@ -26,6 +26,7 @@ const servicesList = [
       'Kane gives you the blocks & kits you need to create a true website within minutes.',
   },
 ];
+
 const Services = () => {
   return (
     <section id="services" className="services-area">

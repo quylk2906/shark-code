@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SlideUp from '../animations/slideUp';
 
-const Banner = () => {
+type Prop = {
+  firstName: string;
+  lastName: string;
+  title: string;
+};
+
+const Banner: FC<Prop> = (props) => {
+  const { firstName, lastName, title } = props;
   return (
     <section id="home" className="main-hero-area">
       <div className="container">
@@ -12,12 +19,10 @@ const Banner = () => {
               <SlideUp>
                 <div className="hero-content rmb-25 text-center">
                   <h1>
-                    I'm <span>Kane</span> Walker
+                    I'm <span>{firstName}</span> {lastName}
                   </h1>
                   <div className="job">
-                    <span>UI Designer</span>
-                    <span>Webflow Developer</span>
-                    <span>Marketer</span>
+                    <span>{title}</span>
                   </div>
                 </div>
               </SlideUp>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   return (
     <footer class="main-footer">
@@ -9,7 +7,8 @@ const Footer = () => {
             <div class="col-lg-12 text-center">
               <div class="copyright-text">
                 <p>
-                  Copyright @2023, <a href="#">Kane</a> All Rights Reserved.
+                  Copyright @2023, <a href="#">Shark Code</a> All Rights
+                  Reserved.
                 </p>
               </div>
             </div>

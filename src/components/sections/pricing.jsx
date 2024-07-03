@@ -34,7 +34,7 @@ const Pricing = () => {
 };
 export default Pricing;
 
-const Card = ({ info, offers, plan_name, price, id }) => {
+export const Card = ({ info, offers, plan_name, price, id }) => {
   return (
     <div className="col-lg-4 col-md-6">
       <ZoomIn id={id}>

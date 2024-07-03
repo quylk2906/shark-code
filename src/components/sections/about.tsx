@@ -1,17 +1,26 @@
 import React from 'react';
 import {
   RiArrowRightUpLine,
-  RiDownloadLine,
+  // RiDownloadLine,
   RiFacebookCircleFill,
   RiTwitterXLine,
   RiLinkedinFill,
   RiGithubLine,
 } from '@remixicon/react';
-import profile_img from '../../assets/images/about/profile.jpg';
 
 import SlideUp from '../animations/slideUp';
+import { FC } from 'react';
+import { ReactNode } from 'react';
 
-const About = () => {
+type Prop = {
+  avatar: string;
+  name: string;
+  intro: ReactNode;
+  skills: string[];
+};
+
+const About: FC<Prop> = (props) => {
+  const { name, intro, skills, avatar } = props;
   return (
     <section id="about" className="about-area">
       <div className="container">
@@ -20,8 +29,8 @@ const About = () => {
           <div className="col-lg-5">
             <SlideUp>
               <div className="about-image-part">
-                <img src={profile_img} alt="About Me" />
-                <h2>Kane Walker</h2>
+                <img src={avatar} alt="About Me" />
+                <h2>{name}</h2>
                 <div className="about-btn btn-one text-center">
                   <h6>Available for Work</h6>
                   <div className="circle pulse color-pulse"></div>
@@ -66,57 +75,26 @@ const About = () => {
           <div className="col-lg-7">
             <div className="about-content-part">
               <SlideUp>
-                <h2>
-                  Hello, I’m Phung, <span>Product Manager</span> with over 4
-                  years of experience in Web, Mobile Development
-                </h2>
-                <div className="hero-btns">
+                <h2>{intro}</h2>
+                {/* <div className="hero-btns">
                   <a href="#" className="theme-btn">
                     Download CV{' '}
                     <i>
-                      <RiDownloadLine size={16} />
+                      // <RiDownloadLine size={16} />
                     </i>
                   </a>
-                </div>
+                </div> */}
               </SlideUp>
               <SlideUp>
                 <ul className="list-style-one two-column">
-                  <li>
-                    <i>
-                      <RiArrowRightUpLine size={18} />
-                    </i>{' '}
-                    Logo Design
-                  </li>
-                  <li>
-                    <i>
-                      <RiArrowRightUpLine size={18} />
-                    </i>{' '}
-                    Social Marketing
-                  </li>
-                  <li>
-                    <i>
-                      <RiArrowRightUpLine size={18} />
-                    </i>{' '}
-                    Branding Identity
-                  </li>
-                  <li>
-                    <i>
-                      <RiArrowRightUpLine size={18} />
-                    </i>{' '}
-                    Digital Marketing
-                  </li>
-                  <li>
-                    <i>
-                      <RiArrowRightUpLine size={18} />
-                    </i>{' '}
-                    Web Design
-                  </li>
-                  <li>
-                    <i>
-                      <RiArrowRightUpLine size={18} />
-                    </i>{' '}
-                    Product Design
-                  </li>
+                  {skills.map((el, idx) => (
+                    <li key={idx}>
+                      <i>
+                        <RiArrowRightUpLine size={18} />
+                      </i>{' '}
+                      {el}
+                    </li>
+                  ))}
                 </ul>
               </SlideUp>
             </div>

@@ -1,12 +1,23 @@
-import React from 'react';
-
+import React, { FC } from 'react';
 import { RiBookLine } from '@remixicon/react';
 import Title from '../ui/title';
 import SlideUp from '../animations/slideUp';
-import { workExperience } from '../../utlits/fackData/workExperience';
-import { educationExperience } from '../../utlits/fackData/educationExperience';
 
-const Experience = () => {
+type Props = {
+  data: {
+    years: string;
+    institute: string;
+    position: string;
+    description: string;
+    responsibilities?: React.ReactNode;
+    accomplishments?: React.ReactNode;
+    technologies?: React.ReactNode;
+  }[];
+};
+
+const Experience: FC<Props> = ({ data }) => {
+  const data_1 = data?.slice(0, data.length / 2) ?? [];
+  const data_2 = data?.slice(data.length / 2, data.length) ?? [];
   return (
     <section id="resume" className="resume-area">
       <div className="container">
@@ -14,7 +25,7 @@ const Experience = () => {
           <div className="col-xl-12 col-lg-12">
             <Title>
               <p>Experience</p>
-              <h2> Professional Resume</h2>
+              <h2>Professional Resume</h2>
             </Title>
           </div>
         </div>
@@ -23,13 +34,8 @@ const Experience = () => {
             {/*  START EXPERIENCE RESUME DESIGN AREA  */}
             <div className="col-xl-6 col-md-6">
               <div className="experience-list">
-                {workExperience.map(({ id, institute, position, years }) => (
-                  <Card
-                    key={id}
-                    institute={institute}
-                    position={position}
-                    years={years}
-                  />
+                {data_1.map((el, idx) => (
+                  <Card key={idx} {...el} />
                 ))}
               </div>
             </div>
@@ -37,16 +43,9 @@ const Experience = () => {
             {/*  START EDUCATION RESUME DESIGN AREA  */}
             <div className="col-xl-6 col-md-6">
               <div className="experience-list">
-                {educationExperience.map(
-                  ({ id, institute, position, years }) => (
-                    <Card
-                      key={id}
-                      institute={institute}
-                      position={position}
-                      years={years}
-                    />
-                  )
-                )}
+                {data_2.map((el, idx) => (
+                  <Card key={idx} {...el} />
+                ))}
               </div>
             </div>
             {/* END EDUCATION RESUME DESIGN AREA  */}
@@ -59,7 +58,15 @@ const Experience = () => {
 
 export default Experience;
 
-const Card = ({ institute, position, years }) => {
+const Card = ({
+  institute,
+  position,
+  years,
+  responsibilities,
+  description,
+  accomplishments,
+  technologies,
+}) => {
   return (
     <SlideUp>
       <div className="resume-item">
@@ -71,7 +78,25 @@ const Card = ({ institute, position, years }) => {
         <div className="content">
           <span className="years">{years}</span>
           <h4>{institute}</h4>
-          <span className="company">{position}</span>
+          <span className="company text-primary">{position}</span>
+          {description && <p className="text-dark">{description}</p>}
+
+          <h5 className="text-info">Responsibilities:</h5>
+          {responsibilities}
+
+          {accomplishments && (
+            <>
+              <h5 className="text-info">Accomplishments:</h5>
+              {accomplishments}
+            </>
+          )}
+
+          {technologies && (
+            <>
+              <h5 className="text-info">Technologies:</h5>
+              {technologies}
+            </>
+          )}
         </div>
       </div>
     </SlideUp>
