@@ -9,19 +9,40 @@ import './assets/css/responsive.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import FEQuy from './components/pages/FE-Quy.tsx';
 import POPhung from './components/pages/PO-Phung.tsx';
+import MBTHanh from './components/pages/MB-Thanh.tsx';
+import BETuan from './components/pages/BE-Tuan.tsx';
+import BEVuong from './components/pages/BE-Vuong.tsx';
 
 export const menuList = [
   {
     id: 1,
     path: '/shark-code',
-    label: 'Phung - BO',
-    element: <POPhung />,
+    label: 'Quy (FE)',
+    element: <FEQuy />,
   },
   {
     id: 2,
-    path: '/dev-quylk',
-    label: 'Quy - FE',
-    element: <FEQuy />,
+    path: '/phung-bo',
+    label: 'Phung (BO)',
+    element: <POPhung />,
+  },
+  {
+    id: 3,
+    path: '/thanh-mb',
+    label: 'Thanh (Mobile)',
+    element: <MBTHanh />,
+  },
+  {
+    id: 4,
+    path: '/tuan-be',
+    label: 'Tuan (BE)',
+    element: <BETuan />,
+  },
+  {
+    id: 5,
+    path: '/vuong-be',
+    label: 'Vuong (BE)',
+    element: <BEVuong />,
   },
 ];
 

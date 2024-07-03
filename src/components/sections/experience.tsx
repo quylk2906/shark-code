@@ -16,8 +16,8 @@ type Props = {
 };
 
 const Experience: FC<Props> = ({ data }) => {
-  const data_1 = data?.slice(0, data.length - 1 / 2) ?? [];
-  const data_2 = data?.slice(data_1.length, data.length) ?? [];
+  // const data_1 = data?.slice(0, data.length / 2) ?? [];
+  // const data_2 = data?.slice(data_1.length, data.length) ?? [];
   return (
     <section id="resume" className="resume-area">
       <div className="container">
@@ -32,22 +32,22 @@ const Experience: FC<Props> = ({ data }) => {
         <div className="resume-items">
           <div className="row">
             {/*  START EXPERIENCE RESUME DESIGN AREA  */}
-            <div className="col-xl-6 col-md-6">
+            <div className="col-xl-12 col-md-12 col-sm-24">
               <div className="experience-list">
-                {data_1.map((el, idx) => (
+                {data.map((el, idx) => (
                   <Card key={idx} {...el} />
                 ))}
               </div>
             </div>
             {/*  END EXPERIENCE RESUME DESIGN AREA  */}
             {/*  START EDUCATION RESUME DESIGN AREA  */}
-            <div className="col-xl-6 col-md-6">
+            {/* <div className="col-xl-6 col-md-6">
               <div className="experience-list">
                 {data_2.map((el, idx) => (
                   <Card key={idx} {...el} />
                 ))}
               </div>
-            </div>
+            </div> */}
             {/* END EDUCATION RESUME DESIGN AREA  */}
           </div>
         </div>
@@ -78,7 +78,7 @@ const Card = ({
         <div className="content">
           <span className="years">{years}</span>
           <h4>{institute}</h4>
-          <span className="company text-primary">{position}</span>
+          <span className="company text-primary">Title: {position}</span>
           {description && <p className="text-dark">{description}</p>}
 
           <h5 className="text-info">Responsibilities:</h5>

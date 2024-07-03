@@ -862,7 +862,7 @@ html {
 }
 
 .header-inner {
-  padding: 30px 0px;
+  /* padding: 30px 0px; */
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -1027,6 +1027,11 @@ html {
 }
 
 .main-menu .navbar-collapse li a:hover:after {
+  opacity: 1;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+}
+
+.main-menu .navbar-collapse li a.active:after {
   opacity: 1;
   -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
 }
@@ -1199,8 +1204,8 @@ html {
 * ----------------------------------------------------------------------------------------
 */
 .about-area {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .hero-content .job {
@@ -1447,8 +1452,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .resume-area {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background: var(--grey-bg);
 }
 
@@ -1508,8 +1513,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .projects-area {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .project-image {
@@ -1764,8 +1769,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .testimonials-area {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background: var(--grey-bg);
 }
 
@@ -1831,8 +1836,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .pricing-area {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .pricing-item {
@@ -1953,8 +1958,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .contact-area {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .contact-form-area .form-group {
@@ -2032,10 +2037,6 @@ ul.extra-skills li i {
   color: var(--primary-color);
 }
 
-.single-contact {
-  padding-bottom: 20px;
-}
-
 .contact-form-area {
   padding: 40px;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -2055,7 +2056,7 @@ ul.extra-skills li i {
 
 .contact-content-part {
   background: var(--grey-bg);
-  padding: 50px 30px 20px 40px;
+  padding: 20px 40px;
   border-radius: 10px;
 }
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../assets/images/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useMatch, useNavigate } from 'react-router-dom';
 import { menuList } from '../../main';
 
 const Header = () => {
+  const { pathname } = useLocation();
+
   const [isSticky, setisSticky] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', stickyHeader);
@@ -56,20 +58,23 @@ const Header = () => {
                 </div>
                 <div className="navbar-collapse collapse">
                   <ul className="navigation onepage clearfix">
-                    {menuList.map(({ id, label, path }) => (
-                      <li key={id}>
-                        <Link
-                          to={path}
-                          spy={true}
-                          smooth={true}
-                          offset={0}
-                          duration={500}
-                          className="nav-link-click"
-                        >
-                          {label}
-                        </Link>
-                      </li>
-                    ))}
+                    {menuList.map(({ id, label, path }) => {
+                      const active = pathname === path;
+                      return (
+                        <li key={id}>
+                          <Link
+                            to={path}
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                            className={`nav-link-click ${active && 'active'}`}
+                          >
+                            {label}
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </nav>
