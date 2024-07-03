@@ -8,7 +8,7 @@ type Props = {
     years: string;
     institute: string;
     position: string;
-    description: string;
+    description?: string;
     responsibilities?: React.ReactNode;
     accomplishments?: React.ReactNode;
     technologies?: React.ReactNode;
@@ -16,8 +16,8 @@ type Props = {
 };
 
 const Experience: FC<Props> = ({ data }) => {
-  const data_1 = data?.slice(0, data.length / 2) ?? [];
-  const data_2 = data?.slice(data.length / 2, data.length) ?? [];
+  const data_1 = data?.slice(0, data.length - 1 / 2) ?? [];
+  const data_2 = data?.slice(data_1.length, data.length) ?? [];
   return (
     <section id="resume" className="resume-area">
       <div className="container">
@@ -66,7 +66,7 @@ const Card = ({
   description,
   accomplishments,
   technologies,
-}) => {
+}: any) => {
   return (
     <SlideUp>
       <div className="resume-item">

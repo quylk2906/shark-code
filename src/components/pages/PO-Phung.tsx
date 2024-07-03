@@ -7,11 +7,27 @@ import Contact from '../sections/contact/contact';
 import avatar from '../../assets/images/nana.jpg';
 import Experience from '../sections/experience';
 import Skills from '../sections/skills';
+import Education from '../sections/education';
 
 const POPhung = () => {
   return (
     <>
-      <Banner firstName="Nghi Hong" lastName="Phung" title="Product Owner" />
+      <Banner
+        firstName="Nghi Hong"
+        lastName="Phung"
+        title="Product Owner"
+        intro={[
+          ` Phung is a PO with over 4 years of experience in software
+ development on multiple platforms including Web Application
+ Development, Mobile App Development, UI/UX Design, and Database
+ Development.`,
+          ` Phung Hong has experience in full software development life cycle on
+ various types of models: Waterfall, Agile/ Scrum, playing in different roles of BA such as IT
+ BA, Scrum Master, BA Leader, and Product Owner.`,
+          ` Phung Hong has good skills in requirements analysis, technical solution proposals, and
+ communication with other team members.`,
+        ]}
+      />
       <About
         avatar={avatar}
         name="Phung, Nghi Hong"
@@ -23,11 +39,11 @@ const POPhung = () => {
         ]}
         intro={
           <>
-            Hello, I’m Phung, <span>Product Manager</span> with over 4 years of
-            experience in Web, Mobile Development
+            Hello, I’m Phung, <span>Product Manager</span>
           </>
         }
       />
+
       <Skills
         skills={[
           {
@@ -112,7 +128,6 @@ const POPhung = () => {
                     </li>
                   ))}
                 </ol>
-
                 <h6>Solution Evaluation and Recommendation:</h6>
                 <ol>
                   {[
@@ -137,10 +152,229 @@ const POPhung = () => {
             QRcode, and settlement.`,
             institute: ' SmartPay Experience',
             position: 'IT Business Analyst',
-            responsibilities: 'responsibilities',
+            responsibilities: (
+              <ol className="mb-2">
+                {[
+                  `Integrate with a partner's system to provide users with new services: Billing repayment, opening bank accounts: VPBank CASA, CIMB CASA; Loan service: Easy Credit CDL, TPFICO CDL, CIMB buy now pay later, Kredivo BNPL, Mcredit cash-loan; Insurance: Motorbike Insurance BSH, OPES, Health insurance PVI,...`,
+                  `Handling the reconciliation and money flow: recording transactions in the way4 system, exporting transaction reports, calculating transaction fees, recurring payments...`,
+                  `Integrate with service providers, including Napas, Vietinbank, VPBank, Sacombank CyberSources, VietQR, banking and insurance partners.`,
+                  `Meet with partners and the business team for consulting and answering questions about the system behavior`,
+                  `Discuss with the business team to collect requirements and consult the solution if needed`,
+                  `Follow the development progress and partner’s support to keep the deadline`,
+                  `Present and set up sprint grooming with the development tea`,
+                  `Weekly meetings and report to board director`,
+                  `Manage team members' tasks and follow project progress`,
+                  `Work on Merchant App with core features and get the requirements from the business team`,
+                  `Support Biz team coordinate with the IT team and define the solution`,
+                  `Writing a user story, feature description, and flow chart to describe a detailed function`,
+                  `Review the BRD document with the relevant team and propose UI/UX for standard features. `,
+                  `Use the English language for writing BRD/SRS`,
+                  `Use it proficiency tool Figma/Confluence/Paint.. for brainstorming`,
+                  `Documentation on Jira/Confluence of the client.`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            accomplishments: (
+              <ol className="mb-2">
+                {[
+                  `Experienced Scrum methodologies`,
+                  `Strong experience in Azure, PLSQL, Oracle form`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            technologies: (
+              <ol className="mb-2">
+                {[
+                  `Git`,
+                  `Jira`,
+                  `Confluence`,
+                  `PLSQL, SQL`,
+                  `Postman`,
+                  `VisualStudio`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+          },
+          // -------------
+          {
+            years: '7/2021- 3/2022',
+            description: `These websites have some security issues such as authentication, etc. that violate new
+            security policies of the client. The client wants to enhance the system with TOTP (Time-Based
+            OneTime Password)`,
+            institute: 'Manulife Vietnam Limited (PTG-Security Project)',
+            position: 'Senior Business Analyst',
+            responsibilities: (
+              <ol className="mb-2">
+                {[
+                  `Making wireframes and working with the designer to get the final design`,
+                  `Writing user stories and breaking tasks in Jira`,
+                  `Grooming new features with the team before starting a new Sprint`,
+                  `Directly communicate with the client for clarifying requirements and solution discussion`,
+                  `Writing a User Story (Mockup, User Story Description, Acceptance Criteria)`,
+                  `Review user stories and designs developed by team member`,
+                  `Use the English language`,
+                  `Can use document templates of the CONSULTANT`,
+                  `Documentation on Confluence of CLIENT`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            accomplishments: (
+              <ol className="mb-2">
+                {[
+                  `Experienced Scrum methodologies`,
+                  `Strong experience in Azure, PLSQL, Oracle form`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            technologies: (
+              <ol className="mb-2">
+                {[
+                  `Git`,
+                  `Jira`,
+                  `Confluence`,
+                  `PLSQL, SQL`,
+                  `Postman`,
+                  `VisualStudio`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+          },
+          // -------------
+          {
+            years: '1/2021- 6/2021',
+            description: `The client is developing an ATS (eRecruitment) system, and they want to INTEGRATE it with
+            their current AMS and TAS systems to sync data.`,
+            institute: 'Manulife Vietnam Limited (ATS-Integration Project)',
+            position: 'Senior Business Analyst',
+            responsibilities: (
+              <ol className="mb-2">
+                {[
+                  ` Communicate with the customer to get/suggest behavior system, data analyst`,
+                  ` Creating a Project Overview Proposal`,
+                  ` Drawing a Use case diagram`,
+                  ` Documentation and working Data Flow, Sequence Diagrams, and Integration Workflow`,
+                  ` Writing Data Dictionary`,
+                  ` Writing API documen`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            accomplishments: (
+              <ol className="mb-2">
+                {[
+                  `Understanding of how APIs function`,
+                  `Strong experience in SQL and SQL Server`,
+                  `Writing a document technical skills`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            technologies: (
+              <ol className="mb-2">
+                {[
+                  `Oracle DB`,
+                  `Microservices`,
+                  `Java, API`,
+                  `Batchjob Scheduler`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+          },
+          // -----------------------------------------------------------------
+          {
+            years: '1/2020- 12/2020',
+            institute: 'Mecury Studio & CBI Digital',
+            position: 'Junior Business Analyst',
+            responsibilities: (
+              <ol className="mb-2">
+                {[
+                  `Analyze the structure of a business, how it uses technology and what its goals are. - Communicate with senior people in organizations to find out what they hope to achieve.`,
+                  `Identify problems within a business, including by using data modeling techniques - Formulate ways for businesses to improve, based on previous research. - Persuade internal and external stakeholders of the benefits of new technology or strategies.`,
+                  `Oversee the implementation of new technology and systems.`,
+                  `Run workshops and training sessions.`,
+                  `Solutions and development projects were delivered on time and with high-quality standards.`,
+                  `Oversaw design, regulation, and daily management of the principal project - Guide efforts to improve technology systems in a real and cost-effective way - Led and conducted an in-depth analysis of business performance versus business goals.`,
+                  `Create a wireframe for the project and outline new features.`,
+                  `Actively worked with technical architecture, developer teams, quality assurance, and clients.`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
+            accomplishments: (
+              <ol className="mb-2">
+                {[
+                  `Describe responsibilities`,
+                  `Conceptual skills`,
+                  `User-centered design processes`,
+                  `Design quality standards`,
+                  `Service and product design methodologies`,
+                  `Agile and Scrum`,
+                  `Conducting design sprints`,
+                  `User validation`,
+                  `Analytical skills`,
+                  `Collaboration and teamwork`,
+                  `Communication`,
+                ].map((el, idx) => (
+                  <li style={{ listStyle: 'circle' }} key={idx}>
+                    {el}
+                  </li>
+                ))}
+              </ol>
+            ),
           },
         ]}
       />
+
+      <Education>
+        <ol>
+          {[
+            `Ho Chi Minh City University of Technology- HUTECH: Bachelor of Software
+ Engineering – 2019`,
+            `Major: Business Information System Project Management & Professional `,
+          ].map((el, idx) => (
+            <li style={{ listStyle: 'disc' }} key={idx}>
+              {el}
+            </li>
+          ))}
+        </ol>
+      </Education>
       {/* <Services /> */}
       <Contact
         info={{
