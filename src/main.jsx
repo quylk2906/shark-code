@@ -13,7 +13,7 @@ import POPhung from './components/pages/PO-Phung.tsx';
 export const menuList = [
   {
     id: 1,
-    path: '/',
+    path: '/shark-code',
     label: 'Phung - BO',
     element: <POPhung />,
   },

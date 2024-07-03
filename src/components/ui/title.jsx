@@ -1,3 +1,4 @@
+import React from 'react';
 import SlideUp from '../animations/slideUp';
 
 const Title = ({ children }) => {

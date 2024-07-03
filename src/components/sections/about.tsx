@@ -8,7 +8,9 @@ import {
   RiGithubLine,
 } from '@remixicon/react';
 import profile_img from '../../assets/images/about/profile.jpg';
+
 import SlideUp from '../animations/slideUp';
+
 const About = () => {
   return (
     <section id="about" className="about-area">
