@@ -13,9 +13,9 @@ const POPhung = () => {
   return (
     <>
       <Banner
-        firstName="Nghi Hong"
+        firstName="Hong Nghi"
         lastName="Phung"
-        title="Product Owner"
+        title="Product Manager"
         intro={[
           ` Phung is a PO with over 4 years of experience in software
  development on multiple platforms including Web Application
@@ -23,7 +23,7 @@ const POPhung = () => {
  Development.`,
           ` Phung Hong has experience in full software development life cycle on
  various types of models: Waterfall, Agile/ Scrum, playing in different roles of BA such as IT
- BA, Scrum Master, BA Leader, and Product Owner.`,
+ BA, Scrum Master, BA Leader, and Product Manager.`,
           ` Phung Hong has good skills in requirements analysis, technical solution proposals, and
  communication with other team members.`,
         ]}
@@ -34,12 +34,12 @@ const POPhung = () => {
         skills={[
           'Scrum Master',
           'BA Leader',
-          'Product Owner',
+          'Product Manager',
           'Waterfall, Agile/ Scrum',
         ]}
         intro={
           <>
-            Hello, I’m Phung, <span>Product Manager</span>
+            <span>Product Manager</span>
           </>
         }
       />
@@ -87,9 +87,11 @@ const POPhung = () => {
         data={[
           {
             years: '11/2023 - Now',
-            description: `HomeX is an application used by Sale Network (employees of Home Credit Vietnam). This
+            description: [
+              `HomeX is an application used by Sale Network (employees of Home Credit Vietnam). This
             application focuses on paperless procedures to improve the sales workflow and
             performance of Home Credit Vietnam`,
+            ],
             institute: 'HomeCredit Experience',
             position: 'IT Business Analyst',
             responsibilities: (
@@ -146,10 +148,12 @@ const POPhung = () => {
           },
           {
             years: '3/2022- 11/2023',
-            description: `This Fintech domain was built for mobile applications. It provides a network of functional and
+            description: [
+              `This Fintech domain was built for mobile applications. It provides a network of functional and
             intelligent financial services to the community of customers and merchants, as well as
             multiple capacities like top-up, online money transfers, bill payment, payment by scanning a
             QRcode, and settlement.`,
+            ],
             institute: ' SmartPay Experience',
             position: 'IT Business Analyst',
             responsibilities: (
@@ -210,9 +214,11 @@ const POPhung = () => {
           // -------------
           {
             years: '7/2021- 3/2022',
-            description: `These websites have some security issues such as authentication, etc. that violate new
+            description: [
+              `These websites have some security issues such as authentication, etc. that violate new
             security policies of the client. The client wants to enhance the system with TOTP (Time-Based
             OneTime Password)`,
+            ],
             institute: 'Manulife Vietnam Limited (PTG-Security Project)',
             position: 'Senior Business Analyst',
             responsibilities: (
@@ -266,8 +272,10 @@ const POPhung = () => {
           // -------------
           {
             years: '1/2021- 6/2021',
-            description: `The client is developing an ATS (eRecruitment) system, and they want to INTEGRATE it with
+            description: [
+              `The client is developing an ATS (eRecruitment) system, and they want to INTEGRATE it with
             their current AMS and TAS systems to sync data.`,
+            ],
             institute: 'Manulife Vietnam Limited (ATS-Integration Project)',
             position: 'Senior Business Analyst',
             responsibilities: (

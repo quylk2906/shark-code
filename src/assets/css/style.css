@@ -1519,6 +1519,8 @@ ul.extra-skills li i {
 
 .project-image {
   margin-bottom: 45px;
+  aspect-ratio: 1;
+  display: inline-flex;
 }
 
 .single-project-item {
@@ -1528,9 +1530,7 @@ ul.extra-skills li i {
 
 .project-image img {
   width: 100%;
-}
-
-.project-content {
+  object-fit: contain;
 }
 
 .project-content .sub-title {

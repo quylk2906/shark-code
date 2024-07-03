@@ -8,7 +8,7 @@ type Props = {
     years: string;
     institute: string;
     position: string;
-    description?: string;
+    description?: string[];
     responsibilities?: React.ReactNode;
     accomplishments?: React.ReactNode;
     technologies?: React.ReactNode;
@@ -79,7 +79,15 @@ const Card = ({
           <span className="years">{years}</span>
           <h4>{institute}</h4>
           <span className="company text-primary">Title: {position}</span>
-          {description && <p className="text-dark">{description}</p>}
+          {description && (
+            <>
+              {description.map((el, idx) => (
+                <p key={idx} className="text-dark">
+                  {el}
+                </p>
+              ))}
+            </>
+          )}
 
           <h5 className="text-info">Responsibilities:</h5>
           {responsibilities}

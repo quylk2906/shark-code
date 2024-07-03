@@ -8,7 +8,7 @@ import avatar from '../../assets/images/quy.jpg';
 import Experience from '../sections/experience';
 import Skills from '../sections/skills';
 import Education from '../sections/education';
-import Portfolio from '../sections/portfolio';
+import Portfolio from '../sections/portfolio.tsx';
 
 const FEQuy = () => {
   return (
@@ -38,7 +38,7 @@ const FEQuy = () => {
         ]}
         intro={
           <>
-            Hello, I’m Quy,<span>Senior FE Developer</span>
+            <span>Senior FE Developer</span>
           </>
         }
       />
@@ -66,7 +66,9 @@ NextUI, TailwindCSS, style module, FCM, storybook, NextJS, GatsbyJS `,
         data={[
           {
             years: 'Oct 2022 – Present ',
-            description: `A B2B fintech startup that is VC-backed and has been recognized for its awesome culture, rapid growth, and as one of the most innovative tech companies in Vietnam. Established in Sep 2019, Bizzi's mission is to apply automation technology to enhance productivity and reduce costs for accounting and finance operations `,
+            description: [
+              `A B2B fintech startup that is VC-backed and has been recognized for its awesome culture, rapid growth, and as one of the most innovative tech companies in Vietnam. Established in Sep 2019, Bizzi's mission is to apply automation technology to enhance productivity and reduce costs for accounting and finance operations `,
+            ],
             institute: `Bizzi Vietnam`,
             position: 'Senior Frontend Developer',
             responsibilities: (
@@ -90,7 +92,9 @@ NextUI, TailwindCSS, style module, FCM, storybook, NextJS, GatsbyJS `,
           // ----------------------------------------------------
           {
             years: 'Nov 2020 - Oct 2022',
-            description: `Fourdigit is a land of inspirations and opportunities. There are bricks that have been laid solid, and even more untouched bricks for you to contribute to the transformation of Fourdigit VN. Fourdigit is a digital company founded in Tokyo in 2001 and specializes in Design and Technology. We have been introducing new services and systems that are already widespread in Japan to Southeast Asia.The establishment of our VN subsidiary in July 2020 in HCM, therefore, is not sudden but simply the next step taken in the natural development of the compan`,
+            description: [
+              `Fourdigit is a land of inspirations and opportunities. There are bricks that have been laid solid, and even more untouched bricks for you to contribute to the transformation of Fourdigit VN. Fourdigit is a digital company founded in Tokyo in 2001 and specializes in Design and Technology. We have been introducing new services and systems that are already widespread in Japan to Southeast Asia.The establishment of our VN subsidiary in July 2020 in HCM, therefore, is not sudden but simply the next step taken in the natural development of the compan`,
+            ],
             institute: 'Fourdigit Vietnam',
             position: 'Senior Frontend Developer',
             responsibilities: (
@@ -153,7 +157,9 @@ NextUI, TailwindCSS, style module, FCM, storybook, NextJS, GatsbyJS `,
           // ----------------------------------------------------
           {
             years: 'Aug 2018 – Jun 2020',
-            description: `ETEQ is the high-tech company that provides IT consultancy, software design and development as well as professional services to the following verticals: Government (Local and Central), Logistics, Tourism, Industry, Health Care, Education...`,
+            description: [
+              `ETEQ is the high-tech company that provides IT consultancy, software design and development as well as professional services to the following verticals: Government (Local and Central), Logistics, Tourism, Industry, Health Care, Education...`,
+            ],
             institute: 'ETEQ JSC',
             position: 'Frontend Developer',
             responsibilities: (

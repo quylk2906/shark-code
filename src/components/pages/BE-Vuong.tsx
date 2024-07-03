@@ -32,7 +32,7 @@ const BEVuong = () => {
         ]}
         intro={
           <>
-            Hello, I’m Phung, <span>Product Manager</span>
+            <span>Product Manager</span>
           </>
         }
       />
@@ -84,7 +84,7 @@ const BEVuong = () => {
         data={[
           {
             years: '',
-            description: ``,
+            description: [``],
             institute: ``,
             position: '',
             responsibilities: (

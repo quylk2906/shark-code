@@ -1,8 +1,101 @@
 import React, { useState } from 'react';
 import { RiArrowRightUpLine } from '@remixicon/react';
 import Title from '../ui/title';
-import { projectsData } from '../../utlits/fackData/projectsData';
 import Lightbox from '../ui/lightbox';
+import tgc01 from '../../assets/images/portfolio/tgc-01.jpg';
+import ast01 from '../../assets/images/portfolio/ast-01.jpeg';
+import saison01 from '../../assets/images/portfolio/saison-01.jpg';
+import aeon01 from '../../assets/images/portfolio/aeon-01.jpg';
+import qsncc01 from '../../assets/images/portfolio/qsncc-01.jpg';
+import bizzi01 from '../../assets/images/portfolio/bizzi-01.jpg';
+import bizzi03 from '../../assets/images/portfolio/bizzi-03.jpg';
+import bizzi05 from '../../assets/images/portfolio/bizzi-05.png';
+import loglag01 from '../../assets/images/portfolio/loglag-01.jpg';
+import farmland01 from '../../assets/images/portfolio/farmland-01.png';
+import mapview01 from '../../assets/images/portfolio/mapview-01.jpg';
+import mapview03 from '../../assets/images/portfolio/mapview-03.jpg';
+import eb01 from '../../assets/images/portfolio/eb-01.jpg';
+import eb03 from '../../assets/images/portfolio/eb-03.jpg';
+import moonso01 from '../../assets/images/portfolio/moonso-01.jpg';
+// function getImageUrl(name: string) {
+//   return new URL(`../../../../public/portfolio/${name}.jpg`, import.meta.url)
+//     .href;
+// }
+
+const FIGURES = [
+  {
+    group: '4DVN',
+    img: tgc01,
+    href: 'https://www.awwwards.com/sites/tokyu-garden-city',
+    name: 'TOKYU Garden City',
+  },
+  {
+    group: '4DVN',
+    img: ast01,
+    name: 'Aeon Smart Technology',
+    href: 'https://www.aeon-st.co.jp/en/',
+  },
+  {
+    group: '4DVN',
+    name: 'SAISON AMERICAN EXPRESS® CARD',
+    img: saison01,
+    href: 'https://www.saisoncard.co.jp/amex/platinumbusiness/?p=tp_mv',
+  },
+  {
+    group: '4DVN',
+    name: 'AEON Card',
+    img: aeon01,
+    href: 'https://www.aeon.co.jp/',
+  },
+  {
+    group: '4DVN',
+    name: 'QSNCC - Bangkok, Thailand',
+    img: qsncc01,
+    href: 'https://www.qsncc.com/en',
+  },
+  {
+    group: 'BIZZI',
+    name: 'Budget management',
+    img: bizzi01,
+    href: 'https://bizzi.vn/the-tin-dung/?fbclid=IwAR2KEcjYkcoQe1uXJ1a7tClqnJJDg6wB4_jT2Hm47mal1nEVXbVtrFkD-IY',
+  },
+  {
+    group: 'BIZZI',
+    name: 'Expense management',
+    img: bizzi03,
+    href: 'https://bizzi.vn/',
+  },
+  {
+    group: 'Loglag',
+    name: 'LogLag Logistics',
+    img: loglag01,
+    href: 'https://startup.vnexpress.net/startup/thong-tin/loglag-technology-746.html',
+  },
+  {
+    group: 'FarmLand',
+    name: 'Farm Land',
+    href: '#',
+    img: farmland01,
+  },
+  {
+    group: 'Other',
+    name: 'Mapview',
+    img: mapview01,
+    href: 'https://app.mapview.com.au/#/',
+  },
+  {
+    group: 'Other',
+    name: 'Extrabread',
+    img: eb01,
+    href: 'https://extrabread.com/',
+  },
+  {
+    group: 'Other',
+    name: 'Moon.so',
+    img: moonso01,
+    href: 'https://dev.moons.so/',
+  },
+];
 
 const animations = ['slideIn', 'fadeIn', 'scaleUp'];
 
@@ -33,17 +126,17 @@ const Portfolio = () => {
 
   // ------ filter unique category
   const filteredCategory = ['All'];
-  projectsData.forEach(({ category }) => {
-    if (!filteredCategory.includes(category)) {
-      filteredCategory.push(category);
+  FIGURES.forEach(({ group }) => {
+    if (!filteredCategory.includes(group)) {
+      filteredCategory.push(group);
     }
   });
   // ------ filter unique category
 
   const filteredProjects =
     category === 'All'
-      ? projectsData
-      : projectsData.filter((image) => image.category === category);
+      ? FIGURES
+      : FIGURES.filter((image) => image.group === category);
 
   return (
     <section id="portfolio" className="projects-area">
@@ -68,14 +161,14 @@ const Portfolio = () => {
           ))}
         </ul>
         <div className="row project-masonry-active">
-          {filteredProjects.map(({ category, id, src, title }) => (
+          {filteredProjects.map(({ group, name, href, img }, id) => (
             <Card
               key={id}
-              category={category}
-              title={title}
-              src={src}
+              category={group}
+              title={name}
+              src={img}
               animationClass={animationClass}
-              openLightbox={openLightbox}
+              openLightbox={() => window.open(href, '_blank')}
             />
           ))}
         </div>
@@ -88,6 +181,7 @@ const Portfolio = () => {
 export default Portfolio;
 
 const Card = ({ category, title, src, animationClass, openLightbox }) => {
+  console.log(`⚡ ~~ Card ~~ src`, src);
   return (
     <div className={`col-lg-4 col-md-6 item branding ${animationClass}`}>
       <div className="project-item style-two wow fadeInUp delay-0-2s">

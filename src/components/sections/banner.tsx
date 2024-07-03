@@ -23,7 +23,7 @@ const Banner: FC<Prop> = (props) => {
                   style={{ paddingBottom: 40 }}
                 >
                   <h1>
-                    I'm <span>{firstName}</span> {lastName}
+                    <span>{firstName}</span> {lastName}
                   </h1>
                   <div className="job">
                     <span>{title}</span>
