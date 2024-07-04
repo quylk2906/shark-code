@@ -1204,8 +1204,8 @@ html {
 * ----------------------------------------------------------------------------------------
 */
 .about-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .hero-content .job {
@@ -1341,7 +1341,7 @@ html {
   background: var(--grey-bg);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 60px 40px;
+  padding: 32px 40px;
   border-radius: 10px;
   border: 1px solid var(--border-color);
 }
@@ -1452,8 +1452,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .resume-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: var(--grey-bg);
 }
 
@@ -1513,8 +1513,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .projects-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .project-image {
@@ -1769,8 +1769,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .testimonials-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: var(--grey-bg);
 }
 
@@ -1836,8 +1836,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .pricing-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pricing-item {
@@ -1958,8 +1958,8 @@ ul.extra-skills li i {
 * ----------------------------------------------------------------------------------------
 */
 .contact-area {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .contact-form-area .form-group {

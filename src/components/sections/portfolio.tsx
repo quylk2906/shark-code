@@ -181,7 +181,6 @@ const Portfolio = () => {
 export default Portfolio;
 
 const Card = ({ category, title, src, animationClass, openLightbox }) => {
-  console.log(`⚡ ~~ Card ~~ src`, src);
   return (
     <div className={`col-lg-4 col-md-6 item branding ${animationClass}`}>
       <div className="project-item style-two wow fadeInUp delay-0-2s">

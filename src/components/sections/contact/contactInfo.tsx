@@ -61,7 +61,7 @@ const ContactInfo: FC<Prop> = (props) => {
                 <RiMailLine size={20} />
               </i>
             </div>
-            <h2>Email us:</h2>
+            <h2>Email:</h2>
             <p>
               <a href={`mailto:${email}`}>{email}</a>
             </p>

@@ -18,9 +18,7 @@ const FEQuy = () => {
         lastName="Quy"
         title="Senior FE Developer"
         intro={[
-          `I want to seek new challenges and opportunities for professional growth, 
-        which allows me to expand my skills and expertise in various areas of 
-        front-end development. `,
+          `Hi, I'm Le Kim Quy, a Senior Front-End Developer specializing in eCommerce solutions for the automotive industry. With 7 years of experience, I excel at creating seamless, user-friendly interfaces that enhance the online car buying experience. My expertise lies in leveraging the latest web technologies to build responsive, high-performance websites that drive sales and improve customer satisfaction. I'm passionate about staying at the forefront of industry trends and continuously improving the digital journey for car buyers.`,
         ]}
       />
       <About

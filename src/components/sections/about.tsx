@@ -35,7 +35,7 @@ const About: FC<Prop> = (props) => {
                   <h6>Available for Work</h6>
                   <div className="circle pulse color-pulse"></div>
                 </div>
-                <div className="about-social text-center">
+                {/* <div className="about-social text-center">
                   <ul>
                     <li>
                       <a href="">
@@ -66,7 +66,7 @@ const About: FC<Prop> = (props) => {
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </SlideUp>
           </div>

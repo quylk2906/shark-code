@@ -77,13 +77,14 @@ const Card = ({
         </div>
         <div className="content">
           <span className="years">{years}</span>
-          <h4>{institute}</h4>
+          <h4 className="mb-0">{institute}</h4>
           <span className="company text-primary">Title: {position}</span>
           {description && (
             <>
+              <div className="text-secondary mb-0">Description</div>
               {description.map((el, idx) => (
-                <p key={idx} className="text-dark">
-                  {el}
+                <p key={idx} className="text-dark mb-1">
+                  {description.length > 1 && '-'} {el}
                 </p>
               ))}
             </>
@@ -94,14 +95,14 @@ const Card = ({
 
           {accomplishments && (
             <>
-              <h5 className="text-info">Accomplishments:</h5>
+              <h5 className="text-info mb-0">Accomplishments:</h5>
               {accomplishments}
             </>
           )}
 
           {technologies && (
             <>
-              <h5 className="text-info">Technologies:</h5>
+              <h5 className="text-info mb-0">Technologies:</h5>
               {technologies}
             </>
           )}

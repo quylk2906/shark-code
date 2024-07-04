@@ -17,20 +17,12 @@ const POPhung = () => {
         lastName="Phung"
         title="Product Manager"
         intro={[
-          ` Phung is a PO with over 4 years of experience in software
- development on multiple platforms including Web Application
- Development, Mobile App Development, UI/UX Design, and Database
- Development.`,
-          ` Phung Hong has experience in full software development life cycle on
- various types of models: Waterfall, Agile/ Scrum, playing in different roles of BA such as IT
- BA, Scrum Master, BA Leader, and Product Manager.`,
-          ` Phung Hong has good skills in requirements analysis, technical solution proposals, and
- communication with other team members.`,
+          `As a seasoned Product Manager in the Ecommerce Sales Car industry, I bring a wealth of experience and a deep understanding of the automotive market to drive innovative solutions and exceptional customer experiences. With a strong background in product development, market analysis, and cross-functional team leadership, I excel in translating customer needs into successful product strategies. My passion for leveraging technology and data-driven insights has consistently resulted in increased sales, enhanced customer satisfaction, and streamlined operations. I am dedicated to staying ahead of market trends and continuously improving the ecommerce car sales landscape to deliver value and growth.`,
         ]}
       />
       <About
         avatar={avatar}
-        name="Phung, Nghi Hong"
+        name="Hong Nghi Phung"
         skills={[
           'Scrum Master',
           'BA Leader',

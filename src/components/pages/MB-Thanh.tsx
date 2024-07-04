@@ -4,7 +4,7 @@ import About from '../sections/about';
 
 import Contact from '../sections/contact/contact';
 
-import avatar from '../../assets/images/thanh.png';
+import avatar from '../../assets/images/thanh.jpg';
 import Experience from '../sections/experience';
 import Skills from '../sections/skills';
 import Education from '../sections/education';
@@ -70,7 +70,6 @@ const MBTHanh = () => {
         data={[
           {
             years: '04/2023- Present',
-            description: [``],
             institute: `Freelance`,
             position: 'ReactJs, NodeJs Developer',
             responsibilities: (
@@ -91,30 +90,37 @@ const MBTHanh = () => {
           {
             years: '06/2018- 03/2023',
             description: [
-              `Integrate with a partner's system to provide users with new services: billing repayment, opening bank account: VP Casa, CIMB Casa, VIB Casa, CIMB CDL, CIMB buy now pay later, MCredit cash-loan, insurance: OPES, GIC…; Integrate with service providers, including Napas, Vietin, VP bank, Sacombank CyberSources, VietQR, banking partners, and insurance partners.`,
+              `Integrate with a partner's system to provide users with new services: billing repayment, opening bank account: VP Casa, CIMB Casa, VIB Casa, CIMB CDL, CIMB buy now pay later, MCredit cash-loan, insurance: OPES, GIC…`,
+              `Integrate with service providers, including Napas, Vietin, VP bank, Sacombank CyberSources, VietQR, banking partners, and insurance partners.`,
             ],
-            institute: 'SmartPay- SmartNet:',
+            institute: 'SmartPay- SmartNet',
             position: 'Full-stack Developer',
             responsibilities: (
-              <ol className="mb-2">
-                {[
-                  `React Native`,
-                  `Take part in the business requirement grooming to clarify the feature behaviors and logics.`,
-                  `Implement the main features in the mobile application such as: money transferring, scratch cards, phone top up, billing protection, Smartcart e-commert, GIC insurance.`,
-                  `One year of Flutter riverpod, a restful API server, notification Firebase, and stream experience`,
-                  `Implement the Smartcard features in the internal salesman's application.`,
-                  `Implement the common components to reuse in the whole team.`,
-                  `Improve UI UX`,
-                  `Present the React secure storage for the development team to qualify the bank partner’s standard.`,
-                  `Writing and publicizing a NPM module.`,
-                  `Weekly meeting and report to line manager.`,
-                  `Team size: Team of 11 member`,
-                ].map((el, idx) => (
-                  <li style={{ listStyle: 'circle' }} key={idx}>
-                    {el}
-                  </li>
-                ))}
-              </ol>
+              <div>
+                <h6>
+                  Smart Ví (e-wallet) & SmartCard mobile application, Merchant
+                  App, Assistant App
+                </h6>
+                <ol className="mb-2">
+                  {[
+                    `React Native`,
+                    `Take part in the business requirement grooming to clarify the feature behaviors and logics.`,
+                    `Implement the main features in the mobile application such as: money transferring, scratch cards, phone top up, billing protection, Smartcart e-commert, GIC insurance.`,
+                    `One year of Flutter riverpod, a restful API server, notification Firebase, and stream experience`,
+                    `Implement the Smartcard features in the internal salesman's application.`,
+                    `Implement the common components to reuse in the whole team.`,
+                    `Improve UI UX`,
+                    `Present the React secure storage for the development team to qualify the bank partner’s standard.`,
+                    `Writing and publicizing a NPM module.`,
+                    `Weekly meeting and report to line manager.`,
+                    `Team size: 11 members`,
+                  ].map((el, idx) => (
+                    <li style={{ listStyle: 'circle' }} key={idx}>
+                      {el}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             ),
           },
           // ----------------------------------------------------
@@ -127,40 +133,55 @@ const MBTHanh = () => {
             institute: 'ISon-Idea solution',
             position: 'Full-stack Developer',
             responsibilities: (
-              <ol className="mb-2">
-                {[
-                  `xxxx`,
-                  `xxxx`,
-                  `xxxx`,
-                  `xxxx`,
-                  `xxxx`,
-                  `xxxx`,
-                  `xxxx`,
-                  `xxxx`,
-                ].map((el, idx) => (
-                  <li style={{ listStyle: 'circle' }} key={idx}>
-                    {el}
-                  </li>
-                ))}
-              </ol>
+              <div>
+                <h6>ERP web portal</h6>
+                <ol className="mb-2">
+                  {[
+                    `Front-end Leader`,
+                    `React JS`,
+                    `Take part in the business requirement grooming to clarify the feature behaviors and logics.`,
+                    `Implement and maintain the product features.`,
+                    `Writing and publicizing a NPM module.`,
+                    `Review the code of the team's other members.`,
+                    `Interview and training new members.`,
+                    `Weekly meeting and report to line manager.`,
+                    `Team size: 6 members`,
+                  ].map((el, idx) => (
+                    <li style={{ listStyle: 'circle' }} key={idx}>
+                      {el}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             ),
-            accomplishments: (
-              <ol className="mb-2">
-                {[`xxxx`, `xxxx`].map((el, idx) => (
-                  <li style={{ listStyle: 'circle' }} key={idx}>
-                    {el}
-                  </li>
-                ))}
-              </ol>
-            ),
-            technologies: (
-              <ol className="mb-2">
-                {[`xxxx`, `xxxx`].map((el, idx) => (
-                  <li style={{ listStyle: 'circle' }} key={idx}>
-                    {el}
-                  </li>
-                ))}
-              </ol>
+          },
+          // ----------------------------------------------------
+          {
+            years: '04/2013- 04/2015',
+            description: [
+              `Selling health care products and cosmetics on their website.`,
+              `The back-office portal can manage online orders, goods information, in/out of stock, product categories, and client information.`,
+            ],
+            institute: 'TVbuy',
+            position: 'BE Developer',
+            responsibilities: (
+              <div>
+                <h6>TVbuy: e-commerce website</h6>
+                <ol className="mb-2">
+                  {[
+                    `PHPdeveloper`,
+                    `Join meetings with the business team.`,
+                    `Implement and maintain the product features.`,
+                    `Work with the design team and project manager directly.`,
+                    `Weekly meeting and report to line manager.`,
+                    `Team size: 8 members`,
+                  ].map((el, idx) => (
+                    <li style={{ listStyle: 'circle' }} key={idx}>
+                      {el}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             ),
           },
         ]}
