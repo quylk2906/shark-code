@@ -23,12 +23,7 @@ const POPhung = () => {
       <About
         avatar={avatar}
         name="Hong Nghi Phung"
-        skills={[
-          'Scrum Master',
-          'BA Leader',
-          'Product Manager',
-          'Waterfall, Agile/ Scrum',
-        ]}
+        skills={['Scrum Master', 'BA Leader', 'Product Owner', 'Data Analyst']}
         intro={
           <>
             <span>Product Manager</span>

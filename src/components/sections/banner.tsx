@@ -1,10 +1,10 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 import SlideUp from '../animations/slideUp';
 
 type Prop = {
-  firstName: string;
-  lastName: string;
-  title: string;
+  firstName?: string;
+  lastName?: string;
+  title?: string;
   intro?: string[];
 };
 
@@ -25,11 +25,19 @@ const Banner: FC<Prop> = (props) => {
                   <h1>
                     <span>{firstName}</span> {lastName}
                   </h1>
-                  <div className="job">
-                    <span>{title}</span>
-                  </div>
+                  {title && (
+                    <div className="job">
+                      <span>{title}</span>
+                    </div>
+                  )}
                 </div>
-                <div style={{ maxWidth: 800, marginInline: 'auto' }}>
+                <div
+                  style={{
+                    maxWidth: 800,
+                    marginInline: 'auto',
+                    textAlign: 'center',
+                  }}
+                >
                   {intro?.map((el, idx) => (
                     <p key={idx} className="mb-1">
                       {el}

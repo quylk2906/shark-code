@@ -1249,7 +1249,8 @@ html {
 .about-image-part {
   text-align: center;
   padding: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* border: 1px solid rgba(0, 0, 0, 0.05); */
+  border: 1px solid var(--border-color);
   border-radius: 10px;
 }
 
@@ -1459,7 +1460,8 @@ ul.extra-skills li i {
 
 .experience-list {
   padding: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* border: 1px solid rgba(0, 0, 0, 0.05); */
+  border: 1px solid var(--border-color);
   border-radius: 10px;
 }
 
@@ -1492,7 +1494,7 @@ ul.extra-skills li i {
 .resume-item .content .years {
   line-height: 1;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   color: var(--black-color);
 }
 
@@ -1500,6 +1502,7 @@ ul.extra-skills li i {
   margin: 12px 0px;
   color: var(--subtitle-color);
   font-size: 20px;
+  font-weight: 600;
 }
 
 .resume-item .content .company {
@@ -1549,6 +1552,7 @@ ul.extra-skills li i {
 
 .project-item.style-two {
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .project-item.style-two .project-image {

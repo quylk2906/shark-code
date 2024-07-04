@@ -204,7 +204,7 @@ const MBTHanh = () => {
         info={{
           address:
             'NL 15 street, My Phuoc 3 ward, Ben Cat district, Binh Duong',
-          phone: '84345609609',
+          phone: '0345609609',
           email: 'hthanh.kg8991@gmail.com',
         }}
       />

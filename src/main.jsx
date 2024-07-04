@@ -11,7 +11,8 @@ import FEQuy from './components/pages/FE-Quy.tsx';
 import POPhung from './components/pages/PO-Phung.tsx';
 import MBTHanh from './components/pages/MB-Thanh.tsx';
 import BETuan from './components/pages/BE-Tuan.tsx';
-import BEVuong from './components/pages/BE-Vuong.tsx';
+import BEVuong from './components/pages/BE-Thien.tsx';
+import Coming from './components/pages/Coming.tsx';
 
 export const menuList = [
   {
@@ -41,8 +42,26 @@ export const menuList = [
   {
     id: 5,
     path: '/shark-code/vuong-be',
-    label: 'Vuong (BE)',
+    label: 'Thien (BE)',
     element: <BEVuong />,
+  },
+  {
+    id: 6,
+    path: '/shark-code/dev-ops',
+    label: 'DevOps',
+    element: <Coming />,
+  },
+  {
+    id: 7,
+    path: '/shark-code/qc',
+    label: 'QC-QA',
+    element: <Coming />,
+  },
+  {
+    id: 8,
+    path: '/shark-code/designer',
+    label: 'UI-UX',
+    element: <Coming />,
   },
 ];
 
