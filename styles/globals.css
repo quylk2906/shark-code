@@ -9,6 +9,10 @@
     @apply transition-all duration-300;
   }
 
+  body {
+    @apply font-unbounded;
+  }
+
   /* Icon animation styles - reusable pattern */
   .btn-animated,
   .btn-animated-bg {
@@ -37,10 +41,5 @@
   /* Animated button with background hover effect */
   .btn-animated-bg {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-white/20;
-  }
-
-  /* Shark logo loading animation */
-  .shark-logo-animated {
-    @apply animate-pulse;
   }
 }

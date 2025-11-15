@@ -22,7 +22,6 @@ const BANNER_DATA = [
     id: 1,
     image: '/images/banner-1.jpg',
     title: 'Biến ý tưởng thành công nghệ',
-    subtitle: 'IT Software Solution & Technology',
     description:
       'Phân tích sâu – Hiểu rõ gốc rễ vấn đề doanh nghiệp. Chúng tôi giúp doanh nghiệp xác định vấn đề cốt lõi, đề xuất chiến lược chuyển đổi số và triển khai giải pháp công nghệ phù hợp để tăng trưởng bền vững.',
   },
@@ -30,7 +29,6 @@ const BANNER_DATA = [
     id: 2,
     image: '/images/banner-2.jpg',
     title: 'Đặt uy tín lên hàng đầu',
-    subtitle: '',
     description:
       'Cam kết chất lượng trong từng dòng code và từng dự án. Niềm tin của khách hàng là thước đo thành công của chúng tôi.',
   },
@@ -38,7 +36,6 @@ const BANNER_DATA = [
     id: 3,
     image: '/images/banner-3.jpg',
     title: 'Biến công nghệ thành doanh thu',
-    subtitle: '',
     description:
       'Trong thời đại chuyển đổi số, công nghệ không chỉ là công cụ - mà là đòn bẩy giúp doanh nghiệp tăng trưởng. Từ ý tưởng đến giải pháp, từ sản phẩm đến doanh thu - chúng tôi đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững bằng sức mạnh của công nghệ.',
   },
@@ -51,20 +48,25 @@ const BANNER_DATA = [
 
 const ContactButton = () => {
   const router = useRouter();
+
   const handleContact = () => {
     router.push('/contact');
   };
+
   return (
     <Button
       color="white"
-      size="lg"
       variant="ghost"
-      radius="md"
+      radius="none"
       onPress={handleContact}
-      className="font-semibold btn-animated"
+      className={twMerge(
+        'font-semibold btn-animated text-small px-4 py-6',
+        styles.cornerButton
+      )}
       endContent={<Icon icon="lucide:arrow-up-right" fontSize={20} />}
     >
       Liên hệ ngay
+      <span className="absolute bottom-0 right-0 w-3 h-3 bg-white" />
     </Button>
   );
 };
@@ -78,7 +80,7 @@ const Banner = ({ className }: BannerProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: false,
@@ -127,16 +129,11 @@ const Banner = ({ className }: BannerProps) => {
             {/* Content */}
             <div className="absolute inset-0 z-10 h-full flex items-center justify-center">
               <div className="container mx-auto px-4 md:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto text-center text-white">
-                  {banner.subtitle && (
-                    <p className="text-lg md:text-xl mb-4 opacity-90">
-                      {banner.subtitle}
-                    </p>
-                  )}
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <div className="max-w-2xl text-white">
+                  <h1 className="md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     {banner.title}
                   </h1>
-                  <p className="text-base md:text-lg lg:text-xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-base md:text-lg mb-8 opacity-90 leading-relaxed">
                     {banner.description}
                   </p>
                   <ContactButton />

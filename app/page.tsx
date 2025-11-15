@@ -9,7 +9,9 @@
 import Banner from '@/components/banner/banner';
 import LogoAnimated from '@/components/animated-logo/LogoAnimated';
 
-export default function Home() {
+export default async function Home() {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   return (
     <>
       <Banner />
