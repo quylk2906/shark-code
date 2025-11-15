@@ -1,3 +1,46 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @config "../tailwind.config.js";
+
+@layer components {
+  /* Default button hover animations for HeroUI buttons */
+  button[data-hover='true'],
+  button:hover {
+    @apply transition-all duration-300;
+  }
+
+  /* Icon animation styles - reusable pattern */
+  .btn-animated,
+  .btn-animated-bg {
+    svg {
+      @apply transition-transform duration-300;
+    }
+
+    &:hover {
+      svg {
+        @apply translate-x-1;
+      }
+    }
+
+    &[data-hover='true'] {
+      svg {
+        @apply translate-x-1;
+      }
+    }
+  }
+
+  /* Animated button class - apply this className to buttons for hover effects */
+  .btn-animated {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Animated button with background hover effect */
+  .btn-animated-bg {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-white/20;
+  }
+
+  /* Shark logo loading animation */
+  .shark-logo-animated {
+    @apply animate-pulse;
+  }
+}

@@ -9,7 +9,9 @@ import { Button } from '@heroui/button';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 import styles from './banner.module.scss';
+import { useRouter } from 'next/navigation';
 
 type BannerProps = {
   className?: string;
@@ -46,6 +48,26 @@ const BANNER_DATA = [
     video: '/images/sharks_video_smaller.mp4',
   },
 ];
+
+const ContactButton = () => {
+  const router = useRouter();
+  const handleContact = () => {
+    router.push('/contact');
+  };
+  return (
+    <Button
+      color="white"
+      size="lg"
+      variant="ghost"
+      radius="md"
+      onPress={handleContact}
+      className="font-semibold btn-animated"
+      endContent={<Icon icon="lucide:arrow-up-right" fontSize={20} />}
+    >
+      Liên hệ ngay
+    </Button>
+  );
+};
 
 const Banner = ({ className }: BannerProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -117,20 +139,7 @@ const Banner = ({ className }: BannerProps) => {
                   <p className="text-base md:text-lg lg:text-xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
                     {banner.description}
                   </p>
-                  <Button
-                    color="default"
-                    size="lg"
-                    radius="md"
-                    className="bg-white text-black font-semibold hover:bg-gray-100 transition-colors"
-                    endContent={
-                      <Icon
-                        icon="solar:arrow-right-linear"
-                        className="text-lg"
-                      />
-                    }
-                  >
-                    Liên hệ ngay
-                  </Button>
+                  <ContactButton />
                 </div>
               </div>
             </div>

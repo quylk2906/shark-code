@@ -7,6 +7,7 @@
 // import { title, subtitle } from '@/components/primitives';
 // import { GithubIcon } from '@/components/icons';
 import Banner from '@/components/banner/banner';
+import LogoAnimated from '@/components/animated-logo/LogoAnimated';
 
 export default function Home() {
   return (

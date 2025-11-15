@@ -1,13 +1,9 @@
 .banner {
   :global(.slick-dots) {
-    bottom: 20px !important;
+    bottom: -20px;
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 8px !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    justify-content: center;
+    gap: 8px;
 
     li {
       width: auto;
@@ -16,9 +12,9 @@
 
       &:global(.slick-active) {
         button {
-          background-color: rgba(255, 255, 255, 1);
+          background-color: rgba(0, 0, 0, 0.8);
           &:hover {
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(0, 0, 0, 0.6);
           }
         }
       }
@@ -28,33 +24,10 @@
       width: 40px;
       height: 4px;
       padding: 0;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 2px !important;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
       &:before {
         display: none;
-      }
-    }
-  }
-
-  &.darkDots {
-    :global(.slick-dots) {
-      li {
-        &:global(.slick-active) {
-          button {
-            background-color: rgba(0, 0, 0, 0.8);
-            &:hover {
-              background-color: rgba(0, 0, 0, 0.6);
-            }
-          }
-        }
-      }
-
-      button {
-        background: rgba(0, 0, 0, 0.3);
-      }
-
-      li.slick-active button:hover {
-        background: rgba(0, 0, 0, 0.6);
       }
     }
   }
