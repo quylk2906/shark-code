@@ -19,6 +19,10 @@ type BannerProps = {
 
 const BANNER_DATA = [
   {
+    id: 4,
+    video: '/images/sharks_video_smaller.mp4',
+  },
+  {
     id: 1,
     image: '/images/banner-1.jpg',
     title: 'Biến ý tưởng thành công nghệ',
@@ -38,11 +42,6 @@ const BANNER_DATA = [
     title: 'Biến công nghệ thành doanh thu',
     description:
       'Trong thời đại chuyển đổi số, công nghệ không chỉ là công cụ - mà là đòn bẩy giúp doanh nghiệp tăng trưởng. Từ ý tưởng đến giải pháp, từ sản phẩm đến doanh thu - chúng tôi đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững bằng sức mạnh của công nghệ.',
-  },
-
-  {
-    id: 4,
-    video: '/images/sharks_video_smaller.mp4',
   },
 ];
 
@@ -110,13 +109,9 @@ const Banner = ({ className }: BannerProps) => {
           >
             {/* Background Image */}
             {banner.video ? (
-              <video
-                src={banner.video}
-                autoPlay
-                muted
-                loop
-                className="w-full h-full object-cover"
-              />
+              <div className="lg:w-[75%] md:w-full mx-auto h-full flex items-center justify-center">
+                <video src={banner.video} autoPlay muted loop />
+              </div>
             ) : (
               <Image
                 fill
@@ -127,17 +122,28 @@ const Banner = ({ className }: BannerProps) => {
               />
             )}
             {/* Content */}
-            <div className="absolute inset-0 z-10 h-full flex items-center justify-center">
+            <div
+              className={twMerge(
+                'absolute inset-0 z-10 h-full',
+                !banner.video && 'flex items-center justify-center'
+              )}
+            >
               <div className="container mx-auto px-4 md:px-6 lg:px-8">
-                <div className="max-w-2xl text-white">
-                  <h1 className="md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    {banner.title}
+                {banner.video ? (
+                  <h1 className="md:text-5xl lg:text-6xl font-bold mt-16 leading-tight text-center">
+                    NHÀ PHÂN TÍCH <span className="text-red">CÁ MẬP</span>
                   </h1>
-                  <p className="text-base md:text-lg mb-8 opacity-90 leading-relaxed">
-                    {banner.description}
-                  </p>
-                  <ContactButton />
-                </div>
+                ) : (
+                  <div className="max-w-2xl text-white">
+                    <h1 className="md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                      {banner.title}
+                    </h1>
+                    <p className="text-base md:text-lg mb-8 opacity-90 leading-relaxed">
+                      {banner.description}
+                    </p>
+                    <ContactButton />
+                  </div>
+                )}
               </div>
             </div>
           </div>

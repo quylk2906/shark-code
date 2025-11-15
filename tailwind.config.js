@@ -12,6 +12,10 @@ const config = {
       fontFamily: {
         unbounded: ['var(--font-unbounded)', 'sans-serif'],
       },
+      colors: {
+        red: '#FF5252',
+        foreground: '#283c63',
+      },
     },
   },
   darkMode: 'class',
@@ -24,6 +28,18 @@ const config = {
               DEFAULT: '#FFFFFF',
               foreground: '#000000',
             },
+            red: {
+              DEFAULT: '#FF5252',
+              foreground: 'red',
+            },
+            // blue: {
+            //   DEFAULT: '#0000FF',
+            //   foreground: '#FFFFFF',
+            // },
+            // green: {
+            //   DEFAULT: '#00FF00',
+            //   foreground: '#000000',
+            // }
           },
         },
         dark: {
