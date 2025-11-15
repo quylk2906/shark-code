@@ -2,6 +2,11 @@
 
 @config "../tailwind.config.js";
 
+@theme {
+  --color-foreground: #283c63;
+  --color-red: #ff5252;
+}
+
 @layer components {
   /* Default button hover animations for HeroUI buttons */
   button[data-hover='true'],
@@ -11,7 +16,7 @@
 
   body {
     @apply font-unbounded;
-    color: #283c63;
+    color: var(--color-foreground);
   }
 
   /* Icon animation styles - reusable pattern */

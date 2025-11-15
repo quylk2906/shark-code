@@ -1,4 +1,4 @@
-import LogoAnimated from '@/components/animated-logo/LogoAnimated';
+import LogoAnimated from '@/components/animated-logo/animated-logo';
 
 const Loading = () => {
   return (

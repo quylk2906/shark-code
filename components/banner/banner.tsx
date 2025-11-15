@@ -12,6 +12,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import styles from './banner.module.scss';
 import { useRouter } from 'next/navigation';
+import CircleHoverEffect from './hover-effect';
 
 type BannerProps = {
   className?: string;
@@ -73,36 +74,36 @@ const ContactButton = () => {
 const Banner = ({ className }: BannerProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Handle slide change with a unified function
+  const handleSlideChange = (slideIndex: number) => {
+    setCurrentSlide(slideIndex);
+  };
+
   const settings: Settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: false,
     // fade: true,
-    cssEase: 'linear',
-    afterChange: (current: number) => {
-      setCurrentSlide(current);
+    easing: 'ease-in-out',
+    cssEase: 'ease-in-out',
+    beforeChange: (current: number, next: number) => {
+      // This ensures we catch the first change from 0 to 1
+      setTimeout(() => {
+        handleSlideChange(next);
+      }, 500);
     },
   };
 
-  const isSlide4 = currentSlide === 3; // Slide 4 is at index 3
-
   return (
-    <section
-      className={twMerge(
-        'relative',
-        styles.banner,
-        isSlide4 && styles.darkDots,
-        className
-      )}
-    >
+    <section className={twMerge('relative', styles.banner, className)}>
       <Slider {...settings}>
-        {BANNER_DATA.map((banner) => (
+        {BANNER_DATA.map((banner, index) => (
           <div
             key={banner.id}
             className="relative h-[600px] md:h-[700px] lg:h-[800px]"
@@ -134,10 +135,13 @@ const Banner = ({ className }: BannerProps) => {
                     NHÀ PHÂN TÍCH <span className="text-red">CÁ MẬP</span>
                   </h1>
                 ) : (
-                  <div className="max-w-2xl text-white">
-                    <h1 className="md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                  <div className="relative max-w-2xl text-white">
+                    <h1 className="relative z-10 md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                       {banner.title}
                     </h1>
+                    <div className="absolute top-[-16%] left-[21%] pointer-events-none">
+                      <CircleHoverEffect isOpen={currentSlide === index} />
+                    </div>
                     <p className="text-base md:text-lg mb-8 opacity-90 leading-relaxed">
                       {banner.description}
                     </p>
