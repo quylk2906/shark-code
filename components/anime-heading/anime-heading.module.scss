@@ -1,0 +1,24 @@
+@import '~@/styles/init.scss';
+
+.root {
+  $root: &;
+
+  margin-top: 0;
+  // font-weight: $font-weight-bold;
+
+  @include sp {
+    scroll-margin-top: 70px;
+  }
+
+  &--animation {
+    div {
+      display: inline-flex;
+
+      > span {
+        display: inline-block;
+        opacity: 0%;
+        transition-timing-function: cubic-bezier(0.41, 0, 0.43, 1) !important;
+      }
+    }
+  }
+}

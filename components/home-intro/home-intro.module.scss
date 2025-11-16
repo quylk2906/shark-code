@@ -1,0 +1,142 @@
+@import '~@/styles/init.scss';
+
+.homeIntro {
+  $root: &;
+
+  padding-top: 60px;
+  overflow: hidden;
+  background-color: get-color('white');
+
+  @include pc-stand-up {
+    padding-top: 120px;
+  }
+
+  &_title {
+    margin-top: 0;
+    margin-bottom: 36px;
+    line-height: 1.1;
+
+    @include sp {
+      display: grid;
+    }
+
+    @include pc {
+      margin-bottom: 80px;
+      line-height: 1.3;
+    }
+  }
+
+  &_bigTitle {
+    line-height: 80px;
+
+    @include pc {
+      margin-bottom: 10px;
+    }
+
+    @include sp {
+      font-size: 32px;
+      line-height: line-height(42, 32);
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+  }
+
+  &_subTitle {
+    display: block;
+    margin: 0;
+    font-weight: $font-weight-semi-bold;
+
+    @include pc-stand-up {
+      font-size: 56px;
+    }
+
+    @include pc-stand-down {
+      font-size: px2vw-pc(56);
+    }
+
+    @include sp {
+      font-size: 24px;
+      line-height: line-height(32, 24);
+    }
+  }
+
+  &_wrapperText {
+    padding-left: $width-sidebar * 1;
+    pointer-events: none;
+    user-select: none;
+
+    #{$root}_marquee {
+      overflow: unset !important;
+    }
+
+    @include pc-stand-up {
+      margin-left: calc(50vw + #{- div($width-sidebar, 2) - div($width-content, 2)});
+    }
+
+    @include pc-stand-down {
+      margin-left: $width-padding;
+    }
+  }
+
+  &_marquee {
+    > div {
+      &:last-child {
+        margin-left: 16px;
+
+        @include pc {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+
+  &_text {
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: $font-weight-semi-bold;
+    line-height: line-height(64, 40);
+
+    @include pc {
+      padding-bottom: 11px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 16px;
+
+      @include pc {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  &_image {
+    display: inline-flex;
+    margin: 0 16px;
+    width: auto;
+
+    // @include pc {
+    //   margin: 0 40px;
+    // }
+
+    &:first-child {
+      margin-right: 16px !important;
+      margin-left: 0;
+
+      @include pc {
+        margin-right: 40px !important;
+      }
+    }
+  }
+
+  &_buttonContainer {
+    margin-top: 60px;
+    text-align: right;
+
+    @include pc {
+      margin-top: 80px;
+    }
+  }
+}

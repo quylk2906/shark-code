@@ -1,0 +1,138 @@
+@use 'sass:string';
+
+@mixin pc-up {
+  @media (min-width: $breakpoint-pc) {
+    @content;
+  }
+}
+
+@mixin pc-stand-up {
+  @media (min-width: $breakpoint-stand) {
+    @content;
+  }
+}
+
+@mixin pc-stand {
+  @media (min-width: $breakpoint-stand) and (max-width: #{$breakpoint-pc - $delta}) {
+    @content;
+  }
+}
+
+@mixin pc-stand-down {
+  @media (min-width: $breakpoint-sp) and (max-width: #{$breakpoint-stand - $delta}) {
+    @content;
+  }
+}
+
+@mixin pc-down {
+  @media (max-width: #{$breakpoint-pc - $delta}) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: $breakpoint-sp) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $breakpoint-tb) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-sp) and (max-width: #{$breakpoint-tb - $delta}) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{$breakpoint-tb - $delta}) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: #{$breakpoint-sp - $delta}) {
+    @content;
+  }
+}
+
+@mixin content-up {
+  @media (min-width: $width-content) {
+    @content;
+  }
+}
+
+@mixin content-down {
+  @media (max-width: #{$width-content - $delta}) {
+    @content;
+  }
+}
+
+@mixin line-clamp($lineCount: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineCount;
+}
+
+@mixin make-color($props: 'background, icon, color, border, mask-image', $type: 'primary/category', $selector: '') {
+  $colors: $primary-color;
+
+  @if $type == 'primary' {
+    $colors: $primary-color;
+  } @else {
+    $colors: $category-color;
+  }
+
+  @each $color in $colors {
+    #{str-replace('$' + $selector, '$', '&--#{$color}')} {
+      @if string.index($props, 'background') {
+        background-color: get-color($type, $color);
+      }
+
+      @if string.index($props, 'icon') {
+        background-image: url('~images/icons/#{$color}.svg');
+      }
+
+      @if string.index($props, 'mask-image') {
+        -webkit-mask-image: url('~images/icons/#{$color}.svg');
+      }
+
+      @if string.index($props, 'color') {
+        color: get-color($type, $color);
+      }
+
+      @if string.index($props, 'border') {
+        border-color: get-color($type, $color);
+      }
+    }
+  }
+}
+
+@mixin lang($lang: 'vi/en/ja') {
+  html[lang='#{$lang}'] & {
+    @if $lang == 'ja' {
+      font-family: $font-family-ja;
+    }
+
+    @content;
+  }
+}
+
+@mixin win($lang: 'vi/en/ja') {
+  html[lang='#{$lang}'][data-ios='win'] & {
+    @content;
+  }
+}
+
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

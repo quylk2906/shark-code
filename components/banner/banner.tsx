@@ -33,7 +33,7 @@ const BANNER_DATA = [
   {
     id: 2,
     image: '/images/banner-2.jpg',
-    title: 'Đặt uy tín lên hàng đầu',
+    title: 'Đặt uy tín\nlên hàng đầu',
     description:
       'Cam kết chất lượng trong từng dòng code và từng dự án. Niềm tin của khách hàng là thước đo thành công của chúng tôi.',
   },
@@ -59,10 +59,7 @@ const ContactButton = () => {
       variant="ghost"
       radius="none"
       onPress={handleContact}
-      className={twMerge(
-        'font-semibold btn-animated text-small px-4 py-6',
-        styles.cornerButton
-      )}
+      className={twMerge('font-semibold btn-animated text-small px-4 py-6', styles.cornerButton)}
       endContent={<Icon icon="lucide:arrow-up-right" fontSize={20} />}
     >
       Liên hệ ngay
@@ -104,10 +101,7 @@ const Banner = ({ className }: BannerProps) => {
     <section className={twMerge('relative', styles.banner, className)}>
       <Slider {...settings}>
         {BANNER_DATA.map((banner, index) => (
-          <div
-            key={banner.id}
-            className="relative h-[600px] md:h-[700px] lg:h-[800px]"
-          >
+          <div key={banner.id} className="relative h-[600px] md:h-[700px] lg:h-[800px]">
             {/* Background Image */}
             {banner.video ? (
               <div className="lg:w-[75%] md:w-full mx-auto h-full flex items-center justify-center">
@@ -136,7 +130,7 @@ const Banner = ({ className }: BannerProps) => {
                   </h1>
                 ) : (
                   <div className="relative max-w-2xl text-white">
-                    <h1 className="relative z-10 md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <h1 className="relative z-10 md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-pre-line">
                       {banner.title}
                     </h1>
                     <div className="absolute top-[-16%] left-[21%] pointer-events-none">

@@ -7,6 +7,17 @@
   --color-red: #ff5252;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  @apply whitespace-pre-line;
+}
+
 @layer components {
   /* Default button hover animations for HeroUI buttons */
   button[data-hover='true'],

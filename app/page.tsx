@@ -7,6 +7,8 @@
 // import { title, subtitle } from '@/components/primitives';
 // import { GithubIcon } from '@/components/icons';
 import Banner from '@/components/banner/banner';
+import HomeIntro from '@/components/home-intro/home-intro';
+import { Button } from '@heroui/button';
 
 export default async function Home() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -14,6 +16,16 @@ export default async function Home() {
   return (
     <>
       <Banner />
+
+      <HomeIntro
+        title="SharkCode"
+        subTitle="Sức mạnh công nghệ – Tốc độ của cá mập."
+        button={
+          <Button variant="solid" color="primary">
+            Button
+          </Button>
+        }
+      />
     </>
   );
 }

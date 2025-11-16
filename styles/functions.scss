@@ -1,0 +1,58 @@
+/* stylelint-disable scss/operator-no-newline-after */
+
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:string';
+
+@function div($first, $second) {
+  @return math.div($first, $second);
+}
+
+// Zindex Function
+
+@function get-zindex($value) {
+  @return map.get($zindex, $value);
+}
+
+@function get-color($color, $variation: false) {
+  @if map-has-key($colors, $color) {
+    $color: map.get($colors, $color);
+  } @else {
+    @if type-of($color) != color {
+      @error 'Invalid color name: `#{$color}`.';
+    }
+  }
+
+  @if $variation {
+    @if not map-has-key($color, $variation) {
+      @error 'Invalid $variation: `#{$variation}`.';
+    } @else {
+      @return map.get($color, $variation);
+    }
+  }
+
+  @return $color;
+}
+
+@function line-height($height: 16, $font-size: 16) {
+  @return div($height, $font-size);
+}
+
+@function px2vw-pc($px: 0) {
+  @return div($px, 1440) * 100vw;
+}
+
+@function px2vw-sp($px: 0) {
+  @return div($px, 375) * 100vw;
+}
+
+@function str-replace($string, $search, $replace: '') {
+  $index: string.index($string, $search);
+
+  @if $index {
+    @return string.slice($string, 1, $index - 1) + $replace +
+      str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

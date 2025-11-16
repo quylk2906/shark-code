@@ -24,10 +24,7 @@ const CircleHoverEffect = ({ isOpen }: CircleHoverEffectProps) => {
       className={styles.circleHoverEffect}
     >
       <defs>
-        <mask
-          id={`pathMask-${key}`}
-          maskUnits={isOpen ? 'userSpaceOnUse' : 'objectBoundingBox'}
-        >
+        <mask id={`pathMask-${key}`} maskUnits={isOpen ? 'userSpaceOnUse' : 'objectBoundingBox'}>
           <rect width="376" height="184" fill="black" />
           <path
             style={{
