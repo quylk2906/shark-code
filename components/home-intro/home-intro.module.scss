@@ -15,9 +15,11 @@
     margin-top: 0;
     margin-bottom: 36px;
     line-height: 1.1;
+    min-height: 123px;
 
     @include sp {
       display: grid;
+      min-height: 93px;
     }
 
     @include pc {
@@ -27,14 +29,20 @@
   }
 
   &_bigTitle {
-    line-height: 80px;
+    line-height: 1.1;
+    font-size: 44px;
+    font-weight: $font-weight-bold;
 
     @include pc {
       margin-bottom: 10px;
     }
 
+    @include pc-stand-down {
+      font-size: 36px;
+    }
+
     @include sp {
-      font-size: 32px;
+      font-size: 22px;
       line-height: line-height(42, 32);
       letter-spacing: -0.02em;
       white-space: nowrap;
@@ -43,19 +51,15 @@
 
   &_subTitle {
     display: block;
-    margin: 0;
     font-weight: $font-weight-semi-bold;
-
-    @include pc-stand-up {
-      font-size: 56px;
-    }
+    font-size: 32px;
 
     @include pc-stand-down {
-      font-size: px2vw-pc(56);
+      font-size: 24x;
     }
 
     @include sp {
-      font-size: 24px;
+      font-size: 18px;
       line-height: line-height(32, 24);
     }
   }

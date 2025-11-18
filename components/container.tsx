@@ -7,7 +7,7 @@ type ContainerProps = React.PropsWithChildren<{
 }>;
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <section className={twMerge(className, 'container')}>{children}</section>;
+  return <section className={twMerge(className, 'container mx-auto')}>{children}</section>;
 };
 
 export default Container;

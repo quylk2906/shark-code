@@ -1,11 +1,11 @@
 'use client';
 
 import { animate, stagger } from 'animejs';
-import gsap from 'gsap';
 import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 import styles from './anime-heading.module.scss';
 import useAppStore from '@/stores/useAppStore';
 import { twMerge } from 'tailwind-merge';
+import gsap from 'gsap';
 
 type AnimeHeading = {
   id?: string;
@@ -27,6 +27,7 @@ const AnimeHeading: React.FC<PropsWithChildren<AnimeHeading>> = ({
     if (isRunAnimation !== 0 || isLoading || !ref.current) return;
     const targets = ref.current.querySelectorAll('span');
     if (!targets.length) return;
+
     animate(targets, {
       opacity: [0, 1],
       translateX: [30, 0],
@@ -41,6 +42,7 @@ const AnimeHeading: React.FC<PropsWithChildren<AnimeHeading>> = ({
 
   useEffect(() => {
     if (!ref || !ref.current || typeof children !== 'string' || isRunAnimation > -1) return;
+
     if (isAnimation) {
       ref.current.innerHTML =
         (typeof children === 'string' && children.replace(/\S+/g, '<div>$&</div>')) || '';
@@ -55,6 +57,7 @@ const AnimeHeading: React.FC<PropsWithChildren<AnimeHeading>> = ({
 
   useEffect(() => {
     const ele = ref.current;
+
     if (!isAnimation || isRunAnimation > -1) return gsap.killTweensOf(ele);
 
     const start = typeof isAnimation === 'object' ? isAnimation.start : 'bottom 90%';
@@ -68,7 +71,11 @@ const AnimeHeading: React.FC<PropsWithChildren<AnimeHeading>> = ({
         scrub: 0.5,
         // markers: !!isAnimation,
         once: true,
-        onEnter: () => setIsRunAnimation(0),
+        onEnter: () => {
+          // setTimeout(() => {
+          setIsRunAnimation(0);
+          // }, 2000);
+        },
       },
     });
     return () => gsap.killTweensOf(ele);
@@ -76,7 +83,11 @@ const AnimeHeading: React.FC<PropsWithChildren<AnimeHeading>> = ({
   }, [isAnimation]);
 
   return (
-    <p id={id} ref={ref} className={twMerge(styles.root, styles['root--animation'], className)}>
+    <p
+      id={id}
+      ref={ref}
+      className={twMerge(styles.root, isAnimation && styles['root--animation'], className)}
+    >
       {children}
     </p>
   );
