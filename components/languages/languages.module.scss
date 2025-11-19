@@ -1,0 +1,124 @@
+.languages {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 56px;
+  transition: background-color 0.25s $animation-base;
+
+  @include pc {
+    width: 120px;
+    height: 80px;
+  }
+
+  span {
+    font-weight: $font-weight-black;
+
+    &:before {
+      transform: scale(1);
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    pointer-events: none;
+    visibility: visible;
+    opacity: 0%;
+    transition: 0.25s $animation-base;
+
+    @include pc {
+      top: 72px;
+      padding-bottom: 22px;
+    }
+  }
+
+  li {
+    display: block;
+
+    &:last-child {
+      margin-top: 18px;
+    }
+  }
+
+  &__lang-text {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: line-height(24, 14);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      background-color: currentColor;
+      transition: transform 0.25s $animation-base;
+      transform: scale(0, 1);
+      transform-origin: right center;
+    }
+
+    &:hover {
+      &:before {
+        @include pc {
+          transform: scale(1);
+          transform-origin: left center;
+        }
+      }
+    }
+
+    &:focus {
+      &:before {
+        @include sp {
+          transform: scale(1);
+          transform-origin: left center;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    @include pc {
+      background-color: get-color('white');
+    }
+
+    ul {
+      @include pc {
+        pointer-events: all;
+        visibility: visible;
+        background-color: get-color('white');
+        opacity: 100%;
+      }
+    }
+  }
+
+  &--opened {
+    color: get-color('base');
+
+    @include sp {
+      background-color: get-color('white');
+    }
+
+    #{'ul'} {
+      @include sp {
+        pointer-events: all;
+        visibility: visible;
+        background-color: get-color('white');
+        opacity: 100%;
+      }
+    }
+  }
+}

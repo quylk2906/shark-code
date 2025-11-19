@@ -1,7 +1,7 @@
 'use client';
-import { ReactNode, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useMemo } from 'react';
 import Marquee from 'react-fast-marquee';
-import { useInViewport } from 'react-in-viewport';
+import { useInView } from 'react-intersection-observer';
 import styles from './home-intro.module.scss';
 import useAppStore from '@/stores/useAppStore';
 import Container from '@/components/container';
@@ -94,24 +94,21 @@ interface HomeIntroProps {
 }
 
 const HomeIntro: React.FC<HomeIntroProps> = ({ title, subTitle, button }) => {
-  const ref = useRef<HTMLDivElement>(null);
   useMemo(() => gsap.registerPlugin(ScrollTrigger), []);
 
   const { isLoading } = useAppStore();
-  const { inViewport = false } = useInViewport(ref, {
+
+  const { ref: refText1, inView: inViewport1 } = useInView({
     rootMargin: '100px',
     threshold: 1,
+    triggerOnce: true,
   });
 
-  const [isPlay, setIsPlay] = useState(false);
-
-  useLayoutEffect(() => {
-    if (inViewport) {
-      setTimeout(() => {
-        setIsPlay(true);
-      }, 500);
-    }
-  }, [inViewport, isLoading]);
+  const { ref: refText2, inView: inViewport2 } = useInView({
+    rootMargin: '100px',
+    threshold: 1,
+    triggerOnce: true,
+  });
 
   return (
     <section className={styles.homeIntro}>
@@ -149,8 +146,8 @@ const HomeIntro: React.FC<HomeIntroProps> = ({ title, subTitle, button }) => {
       </h2>
 
       <Container>
-        <div className={styles.homeIntro_title}>
-          {isPlay && (
+        <div className={styles.homeIntro_title} ref={refText1}>
+          {inViewport1 && (
             <>
               <AnimeHeading
                 className={styles.homeIntro_bigTitle}
@@ -170,39 +167,53 @@ const HomeIntro: React.FC<HomeIntroProps> = ({ title, subTitle, button }) => {
         </div>
       </Container>
 
-      <div className={styles.homeIntro_wrapperText} ref={ref}>
-        {DATA.map((marquee, marqueeIndex) => (
-          <Marquee
-            key={marqueeIndex}
-            // gradient={false}
-            speed={marquee.speed}
-            play
-            className={styles.homeIntro_marquee}
-          >
-            {Array(3)
-              .fill(null)
-              .map((_v, i) => (
-                <div className={styles.homeIntro_text} key={i}>
-                  {marquee.items.map((item, itemIndex) => {
-                    if (item.type === 'text') {
-                      return <span key={itemIndex}>{item.content}</span>;
-                    }
-                    return (
-                      <Image
-                        key={itemIndex}
-                        className={styles.homeIntro_image}
-                        src={item.src!}
-                        width={item.width!}
-                        height={item.height!}
-                        alt={item.alt!}
-                      />
-                    );
-                  })}
-                </div>
-              ))}
-          </Marquee>
-        ))}
+      <div className={styles.homeIntro_wrapperText} ref={refText2}>
+        {inViewport2 ? (
+          DATA.map((marquee, marqueeIndex) => (
+            <Marquee
+              key={marqueeIndex}
+              // gradient={false}
+              speed={marquee.speed}
+              play
+              className={styles.homeIntro_marquee}
+            >
+              {Array(3)
+                .fill(null)
+                .map((_v, i) => (
+                  <div className={styles.homeIntro_text} key={i}>
+                    {marquee.items.map((item, itemIndex) => {
+                      if (item.type === 'text') {
+                        return <span key={itemIndex}>{item.content}</span>;
+                      }
+                      return (
+                        <Image
+                          key={itemIndex}
+                          className={styles.homeIntro_image}
+                          src={item.src!}
+                          width={item.width!}
+                          height={item.height!}
+                          alt={item.alt!}
+                        />
+                      );
+                    })}
+                  </div>
+                ))}
+            </Marquee>
+          ))
+        ) : (
+          <div className="h-40" />
+        )}
       </div>
+
+      <Container>
+        <Image
+          src="/images/bg-01.jpg"
+          alt="home-intro-11"
+          width={1264}
+          height={800}
+          className="w-full h-auto mt-26"
+        />
+      </Container>
       {/* {button && <Container className={styles.homeIntro_buttonContainer}>{button}</Container>} */}
     </section>
   );

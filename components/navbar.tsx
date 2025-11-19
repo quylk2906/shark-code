@@ -1,3 +1,4 @@
+'use client';
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -14,8 +15,6 @@ import { Input } from '@heroui/input';
 import { link as linkStyles } from '@heroui/theme';
 import NextLink from 'next/link';
 import clsx from 'clsx';
-
-import { siteConfig } from '@/config/site';
 import { ThemeSwitch } from '@/components/theme-switch';
 import {
   TwitterIcon,
@@ -25,31 +24,33 @@ import {
   SearchIcon,
   Logo,
 } from '@/components/icons';
+import { Icon } from '@iconify/react';
+import Languages from './languages/languages';
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: 'bg-default-100',
-        input: 'text-sm',
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={['command']}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none shrink-0" />
-      }
-      type="search"
-    />
-  );
+  // const searchInput = (
+  //   <Input
+  //     aria-label="Search"
+  //     classNames={{
+  //       inputWrapper: 'bg-default-100',
+  //       input: 'text-sm',
+  //     }}
+  //     endContent={
+  //       <Kbd className="hidden lg:inline-block" keys={['command']}>
+  //         K
+  //       </Kbd>
+  //     }
+  //     labelPlacement="outside"
+  //     placeholder="Search..."
+  //     startContent={
+  //       <SearchIcon className="text-base text-default-400 pointer-events-none shrink-0" />
+  //     }
+  //     type="search"
+  //   />
+  // );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="full" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -57,26 +58,10 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">ACME</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium'
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
-        </ul>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-        <NavbarItem className="hidden sm:flex gap-2">
+        {/* <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
           </Link>
@@ -100,19 +85,36 @@ export const Navbar = () => {
           >
             Sponsor
           </Button>
+        </NavbarItem> */}
+        <NavbarItem className="hidden md:flex">
+          <Button color="primary" variant="light" radius="sm">
+            Liên hệ
+          </Button>
+        </NavbarItem>
+
+        <NavbarItem className="hidden md:flex">
+          <Languages />
+        </NavbarItem>
+
+        <NavbarItem className="hidden md:flex">
+          <Icon icon="lucide:audio-lines" />
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
+      {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+        <Button color="primary" variant="light" radius="sm">
+          Liên hệ
+        </Button>
       </NavbarContent>
 
-      <NavbarMenu>
-        {searchInput}
+      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+        <NavbarMenuToggle />  
+        <Languages />
+      </NavbarContent> */}
+
+      {/* <NavbarMenu> */}
+
+      {/* {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
@@ -131,8 +133,8 @@ export const Navbar = () => {
               </Link>
             </NavbarMenuItem>
           ))}
-        </div>
-      </NavbarMenu>
+        </div> */}
+      {/* </NavbarMenu> */}
     </HeroUINavbar>
   );
 };
