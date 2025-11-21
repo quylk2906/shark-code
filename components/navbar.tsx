@@ -22,10 +22,11 @@ import {
   DiscordIcon,
   HeartFilledIcon,
   SearchIcon,
-  Logo,
 } from '@/components/icons';
 import { Icon } from '@iconify/react';
 import Languages from './languages/languages';
+
+import Logo from './logo-slogan.svg';
 
 export const Navbar = () => {
   // const searchInput = (
@@ -50,12 +51,18 @@ export const Navbar = () => {
   // );
 
   return (
-    <HeroUINavbar maxWidth="full" position="sticky">
+    <HeroUINavbar
+      maxWidth="full"
+      position="sticky"
+      height={100}
+      classNames={{
+        wrapper: 'pl-11 pr-0',
+      }}
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
-            <p className="font-bold text-inherit">ACME</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -86,19 +93,21 @@ export const Navbar = () => {
             Sponsor
           </Button>
         </NavbarItem> */}
-        <NavbarItem className="hidden md:flex">
-          <Button color="primary" variant="light" radius="sm">
-            Liên hệ
-          </Button>
-        </NavbarItem>
 
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className="hidden md:flex h-full">
           <Languages />
         </NavbarItem>
 
-        <NavbarItem className="hidden md:flex">
-          <Icon icon="lucide:audio-lines" />
+        <NavbarItem className="hidden md:flex h-full">
+          <Button color="primary" radius="none" className="h-full px-8">
+            Liên hệ
+          </Button>
+          <Button variant="light" radius="none" className="h-full px-10">
+            <Icon icon="lucide:component" fontSize={24} />
+          </Button>
         </NavbarItem>
+
+        {/* <NavbarItem className="hidden md:flex px-6"></NavbarItem> */}
       </NavbarContent>
 
       {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">

@@ -9,7 +9,7 @@
 
   @include pc {
     width: 120px;
-    height: 80px;
+    height: 100%;
   }
 
   span {
@@ -91,9 +91,9 @@
   }
 
   &:hover {
-    @include pc {
-      background-color: get-color('white');
-    }
+    //   @include pc {
+    //     background-color: get-color('white');
+    //   }
 
     ul {
       @include pc {
@@ -107,18 +107,17 @@
 
   &--opened {
     color: get-color('base');
+    // @include sp {
+    //   background-color: get-color('white');
+    // }
 
-    @include sp {
-      background-color: get-color('white');
-    }
-
-    #{'ul'} {
-      @include sp {
-        pointer-events: all;
-        visibility: visible;
-        background-color: get-color('white');
-        opacity: 100%;
-      }
-    }
+    // #{'ul'} {
+    //   @include sp {
+    //     pointer-events: all;
+    //     visibility: visible;
+    //     background-color: get-color('white');
+    //     opacity: 100%;
+    //   }
+    // }
   }
 }

@@ -20,6 +20,10 @@ const config = {
       themes: {
         light: {
           colors: {
+            primary: {
+              DEFAULT: '#283C63',
+              foreground: '#FFFFFF',
+            },
             white: {
               DEFAULT: '#FFFFFF',
               foreground: '#000000',
@@ -40,6 +44,10 @@ const config = {
         },
         dark: {
           colors: {
+            primary: {
+              DEFAULT: '#283C63',
+              foreground: '#FFFFFF',
+            },
             white: {
               DEFAULT: '#FFFFFF',
               foreground: '#000000',

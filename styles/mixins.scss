@@ -1,4 +1,6 @@
 @use 'sass:string';
+@use 'constants' as *;
+@use 'functions' as *;
 
 @mixin pc-up {
   @media (min-width: $breakpoint-pc) {
@@ -79,7 +81,11 @@
   -webkit-line-clamp: $lineCount;
 }
 
-@mixin make-color($props: 'background, icon, color, border, mask-image', $type: 'primary/category', $selector: '') {
+@mixin make-color(
+  $props: 'background, icon, color, border, mask-image',
+  $type: 'primary/category',
+  $selector: ''
+) {
   $colors: $primary-color;
 
   @if $type == 'primary' {

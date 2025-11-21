@@ -4,7 +4,15 @@ const nextConfig = {
   reactStrictMode: false,
   sassOptions: {
     // includePaths: [path.join(__dirname, 'styles')],
-    prependData: `@import '~@/styles/init.scss';`,
+    prependData: `@use '~@/styles/init.scss' as *;`,
+  },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
   },
 };
 
