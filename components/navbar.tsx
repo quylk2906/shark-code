@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -25,10 +26,12 @@ import {
 } from '@/components/icons';
 import { Icon } from '@iconify/react';
 import Languages from './languages/languages';
+import { CurvedMenu } from './curved-menu/curved-menu';
 
-import Logo from './logo-slogan.svg';
+import Logo from '@/public/logo-slogan.svg';
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const searchInput = (
   //   <Input
   //     aria-label="Search"
@@ -51,24 +54,25 @@ export const Navbar = () => {
   // );
 
   return (
-    <HeroUINavbar
-      maxWidth="full"
-      position="sticky"
-      height={100}
-      classNames={{
-        wrapper: 'pl-11 pr-0',
-      }}
-    >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-          </NextLink>
-        </NavbarBrand>
-      </NavbarContent>
+    <>
+      <HeroUINavbar
+        maxWidth="full"
+        position="sticky"
+        height={100}
+        classNames={{
+          wrapper: 'pl-11 pr-0',
+        }}
+      >
+        <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+          <NavbarBrand as="li" className="gap-3 max-w-fit">
+            <NextLink className="flex justify-start items-center gap-1" href="/">
+              <Logo />
+            </NextLink>
+          </NavbarBrand>
+        </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-        {/* <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
+          {/* <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
           </Link>
@@ -94,23 +98,30 @@ export const Navbar = () => {
           </Button>
         </NavbarItem> */}
 
-        <NavbarItem className="hidden md:flex h-full">
-          <Languages />
-        </NavbarItem>
+          <NavbarItem className="hidden md:flex h-full">
+            <Languages />
+          </NavbarItem>
 
-        <NavbarItem className="hidden md:flex h-full">
-          <Button color="primary" radius="none" className="h-full px-8">
-            Liên hệ
-          </Button>
-          <Button variant="light" radius="none" className="h-full px-10">
-            <Icon icon="lucide:component" fontSize={24} />
-          </Button>
-        </NavbarItem>
+          <NavbarItem className="hidden md:flex h-full">
+            <Button color="primary" radius="none" className="h-full px-8">
+              Liên hệ
+            </Button>
+            {/* Toggle Menu */}
+            <Button
+              variant="light"
+              radius="none"
+              className="h-full px-10"
+              onPress={() => setIsMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Icon icon="lucide:component" fontSize={24} />
+            </Button>
+          </NavbarItem>
 
-        {/* <NavbarItem className="hidden md:flex px-6"></NavbarItem> */}
-      </NavbarContent>
+          {/* <NavbarItem className="hidden md:flex px-6"></NavbarItem> */}
+        </NavbarContent>
 
-      {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+        {/* <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <Button color="primary" variant="light" radius="sm">
           Liên hệ
         </Button>
@@ -121,9 +132,9 @@ export const Navbar = () => {
         <Languages />
       </NavbarContent> */}
 
-      {/* <NavbarMenu> */}
+        {/* <NavbarMenu> */}
 
-      {/* {searchInput}
+        {/* {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
@@ -143,7 +154,9 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div> */}
-      {/* </NavbarMenu> */}
-    </HeroUINavbar>
+        {/* </NavbarMenu> */}
+      </HeroUINavbar>
+      <CurvedMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+    </>
   );
 };

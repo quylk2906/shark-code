@@ -28,6 +28,10 @@ const BANNER_DATA = [
     video: '/images/sharks_video_smaller_2.mp4',
   },
   {
+    id: 6,
+    video: '/images/sharks_video_smaller_3.mp4',
+  },
+  {
     id: 1,
     image: '/images/banner-1.jpg',
     title: 'Biến ý tưởng thành công nghệ',
