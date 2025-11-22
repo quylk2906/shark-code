@@ -29,9 +29,11 @@ import Languages from './languages/languages';
 import { CurvedMenu } from './curved-menu/curved-menu';
 
 import Logo from '@/public/logo-slogan.svg';
+import { usePathname } from 'next/navigation';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pahtname = usePathname();
   // const searchInput = (
   //   <Input
   //     aria-label="Search"
@@ -60,14 +62,19 @@ export const Navbar = () => {
         position="sticky"
         height={100}
         classNames={{
-          wrapper: 'pl-11 pr-0',
+          wrapper: 'pl-11 pr-0 ',
+          base: 'border-b border-border',
         }}
       >
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3 max-w-fit">
-            <NextLink className="flex justify-start items-center gap-1" href="/">
+            {pahtname === '/' ? (
               <Logo />
-            </NextLink>
+            ) : (
+              <NextLink href="/">
+                <Logo />
+              </NextLink>
+            )}
           </NavbarBrand>
         </NavbarContent>
 

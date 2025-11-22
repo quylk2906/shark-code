@@ -20,14 +20,6 @@ type BannerProps = {
 
 const BANNER_DATA = [
   {
-    id: 4,
-    video: '/images/sharks_video_smaller.mp4',
-  },
-  {
-    id: 5,
-    video: '/images/sharks_video_smaller_2.mp4',
-  },
-  {
     id: 6,
     video: '/images/sharks_video_smaller_3.mp4',
   },
@@ -90,7 +82,7 @@ const Banner = ({ className }: BannerProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: false,

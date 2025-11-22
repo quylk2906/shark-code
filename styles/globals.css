@@ -5,6 +5,7 @@
 @theme {
   --color-foreground: #283c63;
   --color-red: #ff5252;
+  --color-border: #d1d9e0;
 }
 
 h1,
@@ -28,6 +29,7 @@ span {
   body {
     @apply font-unbounded;
     color: var(--color-foreground);
+    position: relative;
   }
 
   /* Icon animation styles - reusable pattern */
