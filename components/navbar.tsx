@@ -1,35 +1,35 @@
 'use client';
 import { useState } from 'react';
-import {
-  Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem,
-} from '@heroui/navbar';
+import NextLink from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@heroui/button';
+import { Input } from '@heroui/input';
 import { Kbd } from '@heroui/kbd';
 import { Link } from '@heroui/link';
-import { Input } from '@heroui/input';
-import { link as linkStyles } from '@heroui/theme';
-import NextLink from 'next/link';
-import clsx from 'clsx';
-import { ThemeSwitch } from '@/components/theme-switch';
 import {
-  TwitterIcon,
-  GithubIcon,
+  Navbar as HeroUINavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from '@heroui/navbar';
+import { link as linkStyles } from '@heroui/theme';
+import { Icon } from '@iconify/react';
+import clsx from 'clsx';
+import {
   DiscordIcon,
+  GithubIcon,
   HeartFilledIcon,
   SearchIcon,
+  TwitterIcon,
 } from '@/components/icons';
-import { Icon } from '@iconify/react';
-import Languages from './languages/languages';
-import { CurvedMenu } from './curved-menu/curved-menu';
-
+import { ThemeSwitch } from '@/components/theme-switch';
 import Logo from '@/public/logo-slogan.svg';
-import { usePathname } from 'next/navigation';
+import { CurvedMenu } from './curved-menu/curved-menu';
+import Languages from './languages/languages';
+import styles from './navbar.module.scss';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,13 +63,21 @@ export const Navbar = () => {
         height={100}
         classNames={{
           wrapper: 'pl-11 pr-0 ',
-          base: 'border-b border-border',
+          base: styles.navbar,
         }}
       >
         <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
           <NavbarBrand as="li" className="gap-3 max-w-fit">
             {pahtname === '/' ? (
-              <Logo />
+              <Logo
+                className="cursor-pointer"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                  });
+                }}
+              />
             ) : (
               <NextLink href="/">
                 <Logo />
@@ -110,9 +118,9 @@ export const Navbar = () => {
           </NavbarItem>
 
           <NavbarItem className="hidden md:flex h-full">
-            <Button color="primary" radius="none" className="h-full px-8">
+            <Link href="/contact" className="h-full px-8 bg-foreground text-white">
               Liên hệ
-            </Button>
+            </Link>
             {/* Toggle Menu */}
             <Button
               variant="light"

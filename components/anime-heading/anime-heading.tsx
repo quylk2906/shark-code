@@ -1,9 +1,9 @@
 'use client';
 
-import { animate, splitText, stagger } from 'animejs';
 import { PropsWithChildren, useEffect, useRef, useState } from 'react';
-import styles from './anime-heading.module.scss';
+import { animate, splitText, stagger } from 'animejs';
 import { twMerge } from 'tailwind-merge';
+import styles from './anime-heading.module.scss';
 
 type AnimeHeading = {
   id?: string;

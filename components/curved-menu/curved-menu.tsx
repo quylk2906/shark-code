@@ -1,34 +1,35 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { Icon } from '@iconify/react';
 import NextLink from 'next/link';
-import clsx from 'clsx';
-import styles from './curved-menu.module.scss';
-
-import ZaloLogo from '@/public/zalo.svg';
-import LogoWhite from '@/public/logo-white.svg';
+import { usePathname, useRouter } from 'next/navigation';
 import { Button } from '@heroui/button';
+import { Icon } from '@iconify/react';
+import clsx from 'clsx';
+import LogoWhite from '@/public/logo-white.svg';
+import ZaloLogo from '@/public/zalo.svg';
+import styles from './curved-menu.module.scss';
 
 interface CurvedMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const PrimaryColorArray = ['sora', 'midori', 'hikari', 'kaze'];
-const CategoryColorArray = [
-  'business',
+const LightColorArray = [
+  'sora',
+  'hikari',
   'nature',
   'culture',
   'network',
   'education',
   'medical',
-  'transportation',
+  'red',
+  'pink',
+  'yellow',
 ];
-const AllColorArray = [...PrimaryColorArray, ...CategoryColorArray];
 
 const getRandomColor = () => {
-  return AllColorArray[Math.floor(Math.random() * AllColorArray.length)];
+  return LightColorArray[Math.floor(Math.random() * LightColorArray.length)];
 };
 
 const ColorLink = ({
@@ -75,9 +76,21 @@ const socialLinks = [
 
 export const CurvedMenu: React.FC<CurvedMenuProps> = ({ isOpen, onClose }) => {
   const menuRef = useRef<HTMLDivElement>(null);
-  const curveRef = useRef<SVGPathElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    onClose();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    if (pathname !== '/') {
+      router.push('/');
+    }
+    onClose();
+  };
 
   return (
     <div ref={menuRef} className={clsx(styles.menuOverlay, isOpen && styles.isOpen)}>
@@ -85,7 +98,7 @@ export const CurvedMenu: React.FC<CurvedMenuProps> = ({ isOpen, onClose }) => {
       <div ref={contentRef} className={styles.menuContent}>
         {/* Header */}
         <div className={styles.menuHeader}>
-          <LogoWhite />
+          <LogoWhite className="cursor-pointer" onClick={handleLogoClick} />
 
           <Button
             size="lg"

@@ -1,5 +1,5 @@
-import { animate } from 'animejs';
 import { useEffect, useRef } from 'react';
+import { animate } from 'animejs';
 
 const Line = ({ text, subText }: { text: string; subText: string }) => {
   return (

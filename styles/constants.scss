@@ -2,8 +2,7 @@
 
 // font resources
 $font-family-base: 'Inter';
-$font-family-ja: 'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-  'Fira Sans', 'Droid Sans', 'Helvetica Neue', '游ゴシック体', 'YuGothic', '游ゴシック', 'Yu Gothic', sans-serif;
+
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -57,8 +56,7 @@ $colors: (
     bg: #f8f8f8,
   ),
   // PRIMARY COLOR
-  'primary':
-    (
+  'primary': (
       'sora': #5fa8e3,
       'midori': #2a9074,
       'hikari': #fdb927,
@@ -82,10 +80,24 @@ $colors: (
     'green': #a4fe2c,
   ),
   'life': #fff1d3,
-  'pattern': #f5f5f5
+  'pattern': #f5f5f5,
+  'light': (
+    // 'sora': #5fa8e3,
+    'hikari': #fdb927,
+    'nature': #1cdba6,
+    'culture': #ee4b6a,
+    'blue': #203bfc,
+    // 'network': #b4c0fe,
+    // 'education': #f1887b,
+    'medical': #79ddf2,
+    'red': #fe1a1f,
+    'pink': #fe4dfd,
+    'yellow': #ffbe2b
+  )
 );
 $primary-color: map.keys(map.get($colors, 'primary'));
 $category-color: map.keys(map.get($colors, 'category'));
+$light-color: map.keys(map.get($colors, 'light'));
 $bus-color: map.keys(map.get($colors, 'bus'));
 
 // animation speed resources

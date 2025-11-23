@@ -2,13 +2,12 @@
 // import { Snippet } from '@heroui/snippet';
 // import { Code } from '@heroui/code';
 // import { button as buttonStyles } from '@heroui/theme';
-
 // import { siteConfig } from '@/config/site';
 // import { title, subtitle } from '@/components/primitives';
 // import { GithubIcon } from '@/components/icons';
+import { Button } from '@heroui/button';
 import Banner from '@/components/banner/banner';
 import HomeIntro from '@/components/home-intro/home-intro';
-import { Button } from '@heroui/button';
 
 export default async function Home() {
   await new Promise((resolve) => setTimeout(resolve, 1000));

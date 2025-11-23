@@ -83,13 +83,15 @@
 
 @mixin make-color(
   $props: 'background, icon, color, border, mask-image',
-  $type: 'primary/category',
+  $type: 'primary/category/light',
   $selector: ''
 ) {
   $colors: $primary-color;
 
   @if $type == 'primary' {
     $colors: $primary-color;
+  } @else if $type == 'light' {
+    $colors: $light-color;
   } @else {
     $colors: $category-color;
   }

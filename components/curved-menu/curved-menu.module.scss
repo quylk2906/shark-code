@@ -138,9 +138,9 @@
   &:before {
     position: absolute;
     top: div(25, 48) + em;
-    right: div(-5, 48) + em;
-    // width: 100%;
-    left: div(-5, 48) + em;
+    // right: div(-5, 48) + em;
+    width: 100%;
+    // left: div(-5, 48) + em;
     height: div(8, 32) + em;
     content: '';
     background-color: get-color('green');
@@ -176,9 +176,9 @@
       }
     }
   }
-
-  @include make-color('background', 'primary', ':before');
-  @include make-color('background', 'category', ':before');
+  @include make-color('background', 'light', ':before');
+  // @include make-color('background', 'primary', ':before');
+  // @include make-color('background', 'category', ':before');
 }
 
 .contactSection {

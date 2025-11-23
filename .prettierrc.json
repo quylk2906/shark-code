@@ -6,5 +6,27 @@
   "tabWidth": 2,
   "useTabs": false,
   "arrowParens": "always",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "server-only",
+    "use client",
+    "^react$",
+    "^next/",
+    "^(?!@/)[^./]",
+    "^@heroui/",
+    "^@/core/",
+    "^@/types",
+    "^@/components/",
+    "^@/lib/",
+    "^@/store/",
+    "^@/hooks/",
+    "^@/utils/",
+    "^@/icons",
+    "^@/public/",
+    "^[./](?!.*\\.module\\.(scss|css)$)",
+    ".*\\.module\\.(scss|css)$"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
 }

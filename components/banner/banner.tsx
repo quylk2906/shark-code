@@ -1,19 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import Slider, { Settings } from 'react-slick';
-import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
-import { Icon } from '@iconify/react';
-import { Button } from '@heroui/button';
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import styles from './banner.module.scss';
 import { useRouter } from 'next/navigation';
+import { Button } from '@heroui/button';
+import { Icon } from '@iconify/react';
+import Slider, { Settings } from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import { twMerge } from 'tailwind-merge';
 import CircleHoverEffect from './hover-effect';
-import VideoAnimatedText from './VideoAnimatedText';
+import VideoAnimatedText from './video-animated-text';
+import styles from './banner.module.scss';
 
 type BannerProps = {
   className?: string;
@@ -83,7 +81,7 @@ const Banner = ({ className }: BannerProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: false,

@@ -1,15 +1,14 @@
 'use client';
 import { ReactNode, useMemo } from 'react';
-import Marquee from 'react-fast-marquee';
-import { useInView } from 'react-intersection-observer';
-import styles from './home-intro.module.scss';
-import useAppStore from '@/stores/useAppStore';
-import Container from '@/components/container';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import clsx from 'clsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import clsx from 'clsx';
-import dynamic from 'next/dynamic';
+import Marquee from 'react-fast-marquee';
+import { useInView } from 'react-intersection-observer';
+import Container from '@/components/container';
+import styles from './home-intro.module.scss';
 
 const AnimeHeading = dynamic(() => import('@/components/anime-heading/anime-heading'), {
   ssr: false,
@@ -93,10 +92,8 @@ interface HomeIntroProps {
   button: ReactNode;
 }
 
-const HomeIntro: React.FC<HomeIntroProps> = ({ title, subTitle, button }) => {
+const HomeIntro: React.FC<HomeIntroProps> = ({ title, subTitle }) => {
   useMemo(() => gsap.registerPlugin(ScrollTrigger), []);
-
-  const { isLoading } = useAppStore();
 
   const { ref: refText1, inView: inViewport1 } = useInView({
     rootMargin: '100px',

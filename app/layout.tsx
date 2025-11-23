@@ -1,13 +1,11 @@
+import { unbounded } from '@/config/fonts';
+import { siteConfig } from '@/config/site';
 import '@/styles/globals.css';
-import { Metadata, Viewport } from 'next';
 import { Link } from '@heroui/link';
 import clsx from 'clsx';
-
-import { Providers } from './providers';
-
-import { siteConfig } from '@/config/site';
+import { Metadata, Viewport } from 'next';
 import { Navbar } from '@/components/navbar';
-import { unbounded } from '@/config/fonts';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: {
@@ -35,23 +33,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
         className={clsx('min-h-screen antialiased', unbounded.variable)}
       >
-        {/* <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}> */}
-        <div className="relative flex flex-col h-screen">
-          <Navbar />
-          <main className="grow">{children}</main>
-          <footer className="w-full flex items-center justify-center py-3">
-            <Link
-              isExternal
-              className="flex items-center gap-1 text-current"
-              href="https://heroui.com?utm_source=next-app-template"
-              title="heroui.com homepage"
-            >
-              <span className="text-default-600">Powered by</span>
-              <p className="text-primary">HeroUI</p>
-            </Link>
-          </footer>
-        </div>
-        {/* </Providers> */}
+        <Providers themeProps={{ attribute: 'class', defaultTheme: 'white' }}>
+          <div className="relative flex flex-col h-screen">
+            <Navbar />
+            <main className="grow">{children}</main>
+            <footer className="w-full flex items-center justify-center py-3">
+              <Link
+                isExternal
+                className="flex items-center gap-1 text-current"
+                href="https://heroui.com?utm_source=next-app-template"
+                title="heroui.com homepage"
+              >
+                <span className="text-default-600">Powered by</span>
+                <p className="text-primary">HeroUI</p>
+              </Link>
+            </footer>
+          </div>
+        </Providers>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import styles from './languages.module.scss';
 import { Button } from '@heroui/button';
 import clsx from 'clsx';
+import styles from './languages.module.scss';
 
 interface LanguagesProps {
   className?: string;
