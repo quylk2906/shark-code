@@ -13,6 +13,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import styles from './banner.module.scss';
 import { useRouter } from 'next/navigation';
 import CircleHoverEffect from './hover-effect';
+import VideoAnimatedText from './VideoAnimatedText';
 
 type BannerProps = {
   className?: string;
@@ -82,7 +83,7 @@ const Banner = ({ className }: BannerProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: false,
@@ -125,9 +126,7 @@ const Banner = ({ className }: BannerProps) => {
             >
               <div className="container mx-auto px-4 md:px-6 lg:px-8">
                 {banner.video ? (
-                  <h1 className="md:text-5xl lg:text-6xl font-bold mt-16 leading-tight text-center">
-                    NHÀ PHÂN TÍCH <span className="text-red">CÁ MẬP</span>
-                  </h1>
+                  <VideoAnimatedText />
                 ) : (
                   <div className="relative max-w-2xl text-white">
                     <h1 className="relative z-10 md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-pre-line">
